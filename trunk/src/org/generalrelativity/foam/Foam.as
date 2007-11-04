@@ -5,7 +5,7 @@ package org.generalrelativity.foam
 	import flash.utils.Dictionary;
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import org.generalrelativity.foam.dynamics.ode.IODESolver;
-	import org.generalrelativity.foam.dynamics.element.enum.Simplification;
+	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.ode.IODE;
 	import org.generalrelativity.foam.dynamics.PhysicsEngine;
 	import flash.events.Event;

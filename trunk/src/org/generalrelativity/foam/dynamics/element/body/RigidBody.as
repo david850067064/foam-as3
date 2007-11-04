@@ -52,7 +52,7 @@ package org.generalrelativity.foam.dynamics.element.body
 	import org.generalrelativity.foam.util.ShapeUtil;
 	import org.generalrelativity.foam.util.RenderingUtil;
 	import org.generalrelativity.foam.util.MathUtil;
-	import org.generalrelativity.foam.dynamics.element.enum.Simplification;
+	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;
 
 	public class RigidBody extends AbstractParticle implements IODE, ISimulatable, IBody

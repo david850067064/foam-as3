@@ -39,7 +39,7 @@ package org.generalrelativity.foam.dynamics.collision.coarse
 	import org.generalrelativity.foam.dynamics.collision.geom.AABR;
 	import org.generalrelativity.foam.dynamics.element.IBody;
 	import flash.utils.Dictionary;
-	import org.generalrelativity.foam.dynamics.element.enum.Simplification;
+	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.fine.sat.SATCollisionFactory;
 	import flash.utils.getDefinitionByName;
 	import org.generalrelativity.foam.dynamics.collision.ICollisionFactory;
