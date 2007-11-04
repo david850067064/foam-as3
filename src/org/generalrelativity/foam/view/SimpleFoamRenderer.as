@@ -10,7 +10,7 @@ package org.generalrelativity.foam.view
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.util.RenderingUtil;
 
-	public class DefaultFoamRenderer extends Sprite implements IFoamRenderer
+	public class SimpleFoamRenderer extends Sprite implements IFoamRenderer
 	{
 		
 		protected var _staticRenderables:Array;
@@ -19,7 +19,7 @@ package org.generalrelativity.foam.view
 		protected var dynamicCanvas:Sprite;
 		protected var currentCanvas:Sprite;
 		
-		public function DefaultFoamRenderer()
+		public function SimpleFoamRenderer()
 		{
 			staticCanvas = addChild( new Sprite() ) as Sprite;
 			dynamicCanvas = addChild( new Sprite() ) as Sprite;

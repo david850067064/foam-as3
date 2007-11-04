@@ -11,7 +11,7 @@ package org.generalrelativity.foam
 	import flash.events.Event;
 	import org.generalrelativity.foam.view.IFoamRenderer;
 	import org.generalrelativity.foam.view.Renderable;
-	import org.generalrelativity.foam.view.DefaultFoamRenderer;
+	import org.generalrelativity.foam.view.SimpleFoamRenderer;
 	import flash.display.DisplayObject;
 	import org.generalrelativity.foam.dynamics.ode.solver.Euler;
 
@@ -54,7 +54,7 @@ package org.generalrelativity.foam
 				
 				if( !_renderer )
 				{
-					_renderer = new DefaultFoamRenderer();
+					_renderer = new SimpleFoamRenderer();
 					addChild( DisplayObject( _renderer ) );
 				}
 				

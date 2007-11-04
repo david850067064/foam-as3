@@ -27,7 +27,7 @@ THE SOFTWARE.
  * @since 10.31.07
  * 
  * @see IODE
- * @see AbstractParticle
+ * @see SimpleParticle
  * */
 package org.generalrelativity.foam.dynamics.ode
 {

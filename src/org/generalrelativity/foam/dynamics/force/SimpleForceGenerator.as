@@ -40,7 +40,7 @@ package org.generalrelativity.foam.dynamics.force
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import org.generalrelativity.foam.math.Vector;
 
-	public class GenericForceGenerator implements IForceGenerator
+	public class SimpleForceGenerator implements IForceGenerator
 	{
 		
 		/** force to apply to element(s) **/
@@ -51,7 +51,7 @@ package org.generalrelativity.foam.dynamics.force
 		 * 
 		 * @param force force to apply to elements
 		 * */
-		public function GenericForceGenerator( force:Vector = null ) : void
+		public function SimpleForceGenerator( force:Vector = null ) : void
 		{
 			_force = force;
 		}

@@ -27,7 +27,7 @@ THE SOFTWARE.
  * @author Drew Cummins
  * @since 10.31.07
  * 
- * @see AbstractParticle
+ * @see SimpleParticle
  * @see IBody
  * */
 package org.generalrelativity.foam.dynamics.element

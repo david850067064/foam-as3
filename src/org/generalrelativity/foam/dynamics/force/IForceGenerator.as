@@ -37,7 +37,7 @@ THE SOFTWARE.
  * @since 10.31.07
  * 
  * @see ISimulatable.addForceGenerator
- * @see GenericForceGenerator
+ * @see SimpleForceGenerator
  * */
 package org.generalrelativity.foam.dynamics.force
 {

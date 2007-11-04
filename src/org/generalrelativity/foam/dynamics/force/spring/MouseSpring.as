@@ -1,16 +1,15 @@
-package org.generalrelativity.foam.dynamics.force.constraint
+package org.generalrelativity.foam.dynamics.force.spring
 {
-	import org.generalrelativity.foam.dynamics.force.GenericForceGenerator;
+	import org.generalrelativity.foam.dynamics.force.SimpleForceGenerator;
 	import org.generalrelativity.foam.dynamics.force.IForceGenerator;
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import org.generalrelativity.foam.math.Vector;
 	import flash.display.DisplayObject;
 	import org.generalrelativity.foam.math.RotationMatrix;
-	import org.generalrelativity.foam.dynamics.element.IRenderable;
 	import flash.display.Graphics;
 
-	public class MouseSpring extends GenericForceGenerator implements IForceGenerator, IRenderable
+	public class MouseSpring extends SimpleForceGenerator implements IForceGenerator
 	{
 		
 		protected var body:RigidBody;
