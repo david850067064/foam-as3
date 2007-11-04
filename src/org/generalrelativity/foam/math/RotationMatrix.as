@@ -21,9 +21,11 @@ package org.generalrelativity.foam.math
 			_theta = value;
 			
 			r11 = Math.cos( theta );
-			r12 = -Math.sin( theta );
+			//r12 = -Math.sin( theta );
 			r21 = Math.sin( theta );
-			r22 = Math.cos( theta );
+			//r22 = Math.cos( theta );
+			r12 = -r21;
+			r22 = r11;
 			
 		}
 		

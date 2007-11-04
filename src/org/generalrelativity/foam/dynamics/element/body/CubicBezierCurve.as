@@ -1,7 +1,37 @@
+/*
+Copyright (c) 2007 Drew Cummins
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
+/**
+ * This is not currently supported- This should be better thought out and included
+ * in the next releast of FOAM. To have any simulational worth, a serious culling
+ * mechanism must be implemented specific to bezier curves.
+ * 
+ * @author Drew Cummins
+ * @since 10.31.07
+ * */
 package org.generalrelativity.foam.dynamics.element.body
 {
+	
 	import org.generalrelativity.foam.math.Vector;
-	import flash.display.Graphics;
 	import org.generalrelativity.foam.dynamics.element.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;
 	
@@ -36,7 +66,7 @@ package org.generalrelativity.foam.dynamics.element.body
 								
 		{
 			
-			super( x, y, mass, null, vx, vy, q, av, friction, elasticity );
+			super( x, y, mass, null, vx, vy, friction, elasticity, q, av );
 			this.height = height;
 			this.resolution = resolution;
 			this.control1 = control1;
@@ -87,45 +117,6 @@ package org.generalrelativity.foam.dynamics.element.body
 			}
 			
 		}
-		
-		/*override public function render( graphics:Graphics = null ):void
-		{
-			
-			var interval:Number;
-			var intervalSq:Number;
-			var intervalCu:Number;
-			var diff:Number;
-			var diffSq:Number;
-			var diffCu:Number;
-			var inverse:Number = 1 / 100;
-			var px:Number;
-			var py:Number;
-			
-			graphics.endFill();
-			graphics.lineStyle( 2, 0x88aa88, 0.7 );
-			graphics.moveTo( x + control1.x, y + control1.y );
-			
-			var i:int;
-			while( ++i <= 100 )
-	    	{
-	    		
-	    		interval = inverse * i;
-    			intervalSq = interval * interval;
-    			intervalCu = intervalSq * interval;
-    			diff = 1 - interval;
-    			diffSq = diff * diff;
-    			diffCu = diffSq * diff;
-    			
-    			px = x + diffCu * control1.x + 3 * interval * diffSq * anchor1.x + 3 * anchor2.x * intervalSq * diff + control2.x * intervalCu;
-	    		py = y + diffCu * control1.y + 3 * interval * diffSq * anchor1.y + 3 * anchor2.y * intervalSq * diff + control2.y * intervalCu;
-	    		
-	    		graphics.lineTo( px, py );
-	    		
-	    	}
-	    	
-	    	
-	    	
-		}*/
 		
 		override protected function calculateInertiaTensor() : void
 		{
