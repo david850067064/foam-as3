@@ -35,7 +35,7 @@ package org.generalrelativity.foam.dynamics.force
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.dynamics.element.IBody;
 
-	public class Friction extends GenericForceGenerator implements IForceGenerator
+	public class Friction extends SimpleForceGenerator implements IForceGenerator
 	{
 		
 		/** coefficient of friction **/

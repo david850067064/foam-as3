@@ -43,7 +43,7 @@ package org.generalrelativity.foam.dynamics.element.body
 {
 	
 }
-	import org.generalrelativity.foam.dynamics.element.particle.AbstractParticle;
+	import org.generalrelativity.foam.dynamics.element.particle.SimpleParticle;
 	import org.generalrelativity.foam.dynamics.ode.IODE;
 	import org.generalrelativity.foam.dynamics.element.IBody;
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
@@ -55,7 +55,7 @@ package org.generalrelativity.foam.dynamics.element.body
 	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;
 
-	public class RigidBody extends AbstractParticle implements IODE, ISimulatable, IBody
+	public class RigidBody extends SimpleParticle implements IODE, ISimulatable, IBody
 	{
 		
 		/** body vertices **/
@@ -90,7 +90,7 @@ package org.generalrelativity.foam.dynamics.element.body
 		 * @param q body's orientation (in radians)
 		 * @param av body's angular velocity
 		 * 
-		 * @see AbstractParticle
+		 * @see SimpleParticle
 		 * @see #caclculateInertiaTensor
 		 * */
 		public function RigidBody( 	x:Number, 
@@ -126,7 +126,7 @@ package org.generalrelativity.foam.dynamics.element.body
 		 * Gets the derivative of the body
 		 * 
 		 * <p>
-		 * Note that both the state and derivative are longer than in AbstractParticle. This
+		 * Note that both the state and derivative are longer than in SimpleParticle. This
 		 * is because a rigid body has 2 more properties to integrate with respect to time
 		 * (orientation and angular velocity).
 		 * </p>
@@ -135,7 +135,7 @@ package org.generalrelativity.foam.dynamics.element.body
 		 * @param derivative Array to populate with body's derivative
 		 * 
 		 * @see IODE.getDerivative
-		 * @see AbstractParticle
+		 * @see SimpleParticle
 		 * */
 		override public function getDerivative( state:Array, derivative:Array ) : void
 		{

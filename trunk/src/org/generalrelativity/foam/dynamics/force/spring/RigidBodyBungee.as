@@ -1,4 +1,36 @@
-package org.generalrelativity.foam.dynamics.force.constraint
+/*
+Copyright (c) 2007 Drew Cummins
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
+/**
+ * Bungee attached to a point on a body
+ * 
+ * TODO: comment
+ * 
+ * @author Drew Cummins
+ * @since 10.31.07
+ * 
+ * @see Spring
+ * */
+package org.generalrelativity.foam.dynamics.force.spring
 {
 	
 	import org.generalrelativity.foam.dynamics.element.IBody;
@@ -12,6 +44,16 @@ package org.generalrelativity.foam.dynamics.force.constraint
 	public class RigidBodyBungee extends RigidBodySpring
 	{
 		
+		/**
+		 * Creates a new RigidBodyBungee
+		 * 
+		 * @param body1 first body involved in bungee
+		 * @param point1 point on body1 given in relative coordinates
+		 * @param body2 second body attached to bungee
+		 * @param point2 point on body2 given in relative coordinates
+		 * @param k spring constant
+		 * @param damp damping coefficient
+		 * */
 		public function RigidBodyBungee( body1:IBody, point1:Vector, body2:IBody, point2:Vector, k:Number = 0.01, damp:Number = 0.01 )
 		{
 			super( body1, point1, body2, point2, k, damp );

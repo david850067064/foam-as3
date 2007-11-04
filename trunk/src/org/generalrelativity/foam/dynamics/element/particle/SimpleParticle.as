@@ -24,12 +24,12 @@ THE SOFTWARE.
  * Basal implementation of ISimulatable
  * 
  * <p>
- * AbstractParticle could be used to simulate particle movement- though no collision
+ * SimpleParticle could be used to simulate particle movement- though no collision
  * system is currently in place for such elements.
  * </p>
  * 
  * <p>
- * AbstractParticle implements IODE as well. This means that the PhysicsEngine can
+ * SimpleParticle implements IODE as well. This means that the PhysicsEngine can
  * advance its state. The IODESolver associated with this "equation" will call for
  * this particle's derivative- it's important that from within that call all forces
  * are accumulated according to the given state. For this reason and tidy modularity,
@@ -56,7 +56,7 @@ package org.generalrelativity.foam.dynamics.element.particle
 	import org.generalrelativity.foam.util.MathUtil;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;
 
-	public class AbstractParticle implements IODE, ISimulatable
+	public class SimpleParticle implements IODE, ISimulatable
 	{
 		
 		/** holds the mass of the particle **/
@@ -75,7 +75,7 @@ package org.generalrelativity.foam.dynamics.element.particle
 		protected var _friction:Number;
 		
 		/**
-		 * Creates a new AbstractParticle
+		 * Creates a new SimpleParticle
 		 * 
 		 * @param x horizontal position of particle
 		 * @param y vertical position of particle
@@ -86,7 +86,7 @@ package org.generalrelativity.foam.dynamics.element.particle
 		 * @param elasticity elastic coefficient (0 - 1.0)
 		 * @param stateLength- defines the length of this IODE's state
 		 * */
-		public function AbstractParticle( 	x:Number, 
+		public function SimpleParticle( 	x:Number, 
 											y:Number, 
 											vx:Number = 0, 
 											vy:Number = 0, 

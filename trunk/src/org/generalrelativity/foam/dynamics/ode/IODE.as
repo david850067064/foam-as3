@@ -41,7 +41,7 @@ THE SOFTWARE.
  * @since 10.31.07
  * 
  * @see IODESolver
- * @see AbstractParticle
+ * @see SimpleParticle
  * */
 package org.generalrelativity.foam.dynamics.ode
 {
@@ -85,7 +85,7 @@ package org.generalrelativity.foam.dynamics.ode
 		 * 
 		 * @see #state
 		 * @see IODESolver
-		 * @see AbstractParticle
+		 * @see SimpleParticle
 		 * */
 		function getDerivative( state:Array, derivative:Array ) : void;
 		

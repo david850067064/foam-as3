@@ -39,7 +39,7 @@ package org.generalrelativity.foam.dynamics.force
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import org.generalrelativity.foam.math.Vector;
 
-	public class Gravity extends GenericForceGenerator implements IForceGenerator
+	public class Gravity extends SimpleForceGenerator implements IForceGenerator
 	{
 		
 		/**
