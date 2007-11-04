@@ -135,10 +135,15 @@ package org.generalrelativity.foam.dynamics.element.particle
 			
 			//accumulate forces
 			accumulateForces();
-			derivative[ 0 ] = state[ 2 ]; //derivative of horizontal position (vx)
-			derivative[ 1 ] = state[ 3 ]; //derivative of vertical position (vy)
-			derivative[ 2 ] = _force.x * inverseMass; //derivative of horizontal velocity 
-			derivative[ 3 ] = _force.y * inverseMass; //derivative of vertical velocity
+			
+			//derivative of position
+			derivative[ 0 ] = state[ 2 ]; //vx
+			derivative[ 1 ] = state[ 3 ]; //vy
+			
+			//derivative of velocity
+			derivative[ 2 ] = _force.x * inverseMass; //ax
+			derivative[ 3 ] = _force.y * inverseMass; //ay
+			
 			//clear all forces
 			clearForces();
 			

@@ -9,17 +9,17 @@ package org.generalrelativity.foam.view
 		
 		public var element:*;
 		public var isDynamic:Boolean;
-		public var depth:int;
 		public var renderMethodKey:Class;
+		public var data:*;
 		
 		public function Renderable( element:*, 
 									isDynamic:Boolean = true, 
-									depth:int = 0 )
+									data:* )
 		{
 			
 			this.element = element;
 			this.isDynamic = isDynamic;
-			this.depth = depth;
+			this.data = data;
 			this.renderMethodKey = getDefinitionByName( getQualifiedClassName( element ) ) as Class;
 			
 		}
