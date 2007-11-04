@@ -1,4 +1,4 @@
-package org.generalrelativity.foam.dynamics.element.enum
+package org.generalrelativity.foam.dynamics.enum
 {
 	public class Simplification
 	{

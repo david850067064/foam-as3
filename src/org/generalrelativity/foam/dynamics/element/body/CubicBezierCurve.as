@@ -32,7 +32,7 @@ package org.generalrelativity.foam.dynamics.element.body
 {
 	
 	import org.generalrelativity.foam.math.Vector;
-	import org.generalrelativity.foam.dynamics.element.enum.Simplification;
+	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;
 	
 	public class CubicBezierCurve extends RigidBody
