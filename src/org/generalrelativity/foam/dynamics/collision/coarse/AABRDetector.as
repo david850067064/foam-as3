@@ -204,6 +204,8 @@ package org.generalrelativity.foam.dynamics.collision.coarse
 		{
 			_dynamicCollidables.splice( _dynamicCollidables.indexOf( collidable ), 1 );
 			_staticCollidables.splice( _staticCollidables.indexOf( collidable ), 1 );
+			_dynamicLength = _dynamicCollidables.length;
+			_collidablesLength = _dynamicLength + _staticCollidables.length;
 		}
 		
 		

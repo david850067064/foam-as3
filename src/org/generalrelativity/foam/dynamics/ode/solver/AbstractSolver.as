@@ -41,7 +41,7 @@ package org.generalrelativity.foam.dynamics.ode.solver
 	{
 		
 		/** equation to solve **/
-		protected var ode:IODE;
+		protected var _ode:IODE;
 		
 		/**
 		 * Constructs a new AbstractSolver
@@ -50,7 +50,12 @@ package org.generalrelativity.foam.dynamics.ode.solver
 		 * */
 		public function AbstractSolver( ode:IODE ) : void
 		{
-			this.ode = ode;
+			_ode = ode;
+		}
+		
+		public function get ode() : IODE
+		{
+			return _ode;
 		}
 		
 		public function step( dt:Number ) : void
