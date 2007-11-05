@@ -58,7 +58,7 @@ package org.generalrelativity.foam.dynamics.force
 		 * */
 		override public function generate( element:ISimulatable ) : void
 		{
-			element.addForce( new Vector( -element.vx * coefficient * element.mass, -element.vy * coefficient * element.mass) );
+			element.addForce( new Vector( -element.vx * coefficient * element.mass, -element.vy * coefficient * element.mass ) );
 			//if we're dealing with a body, apply a rotational damper as well
 			if( element is IBody )
 			{

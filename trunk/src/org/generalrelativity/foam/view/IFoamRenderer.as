@@ -40,7 +40,6 @@ package org.generalrelativity.foam.view
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import flash.display.DisplayObject;
 	import org.generalrelativity.foam.dynamics.element.body.Circle;
-	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	
 	public interface IFoamRenderer
 	{

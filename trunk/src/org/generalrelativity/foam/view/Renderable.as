@@ -32,7 +32,6 @@ THE SOFTWARE.
 package org.generalrelativity.foam.view
 {
 	
-	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import flash.utils.getDefinitionByName;
 	import flash.utils.getQualifiedClassName;
 	

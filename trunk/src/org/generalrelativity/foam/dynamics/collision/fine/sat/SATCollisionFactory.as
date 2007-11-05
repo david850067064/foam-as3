@@ -37,7 +37,6 @@ package org.generalrelativity.foam.dynamics.collision.fine.sat
 	import org.generalrelativity.foam.dynamics.collision.fine.sat.CirclePolygonDetector;
 	import org.generalrelativity.foam.dynamics.collision.fine.sat.PolygonPolygonDetector;
 	import org.generalrelativity.foam.dynamics.collision.fine.sat.CircleCircleDetector;
-	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import flash.utils.getDefinitionByName;
 	import flash.utils.getQualifiedClassName;
 	import org.generalrelativity.foam.dynamics.collision.ICollisionFactory;

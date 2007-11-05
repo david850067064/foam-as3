@@ -76,8 +76,8 @@ package org.generalrelativity.foam.view
 		
 		public function removeRenderable( renderable:Renderable ) : void
 		{
-			_staticRenderables.splice( _staticRenderables.indexOf( renderable ), 1 );
-			_dynamicRenderables.splice( _dynamicRenderables.indexOf( renderable ), 1 );
+			if( !renderable.isDynamic ) _staticRenderables.splice( _staticRenderables.indexOf( renderable ), 1 );
+			else _dynamicRenderables.splice( _dynamicRenderables.indexOf( renderable ), 1 );
 		}
 		
 		public function getDisplayObject( renderable:Renderable ) : DisplayObject
@@ -149,7 +149,7 @@ package org.generalrelativity.foam.view
 			}
 		}
 		
-		protected function drawCircle( circle:Circle, color:uint = 0xaaaaaa ) : void
+		protected function drawCircle( circle:Circle, color:uint = 0xffffff ) : void
 		{
 			currentCanvas.graphics.lineStyle( 1, 0x333333 );
 			currentCanvas.graphics.beginFill( color );
@@ -161,10 +161,10 @@ package org.generalrelativity.foam.view
 		}
 		
 		
-		protected function drawPolygon( polygon:RigidBody, color:uint = 0xaaaaaa ) : void
+		protected function drawPolygon( polygon:RigidBody, color:uint = 0xffffff ) : void
 		{
 			
-			currentCanvas.graphics.lineStyle( 1, 0x333333 );
+			currentCanvas.graphics.lineStyle( 3, 0x333333, 0.4 );
 			currentCanvas.graphics.beginFill( color );
 			
 			var transform:RotationMatrix = polygon.rotation;
@@ -189,7 +189,7 @@ package org.generalrelativity.foam.view
 		
 		protected function drawMouseSpring( mouseSpring:MouseSpring ) : void
 		{
-			currentCanvas.graphics.lineStyle( 3, 0xff0000 );
+			currentCanvas.graphics.lineStyle( 1, 0xff0000 );
 			var pointInWorldSpace:Vector = mouseSpring.getPointInWorldSpace();
 			currentCanvas.graphics.moveTo( pointInWorldSpace.x, pointInWorldSpace.y );
 			currentCanvas.graphics.lineTo( mouseX, mouseY );
@@ -197,7 +197,7 @@ package org.generalrelativity.foam.view
 		
 		protected function drawSpring( spring:Spring ) : void
 		{
-			currentCanvas.graphics.lineStyle( 3, 0xff0000 );
+			currentCanvas.graphics.lineStyle( 1, 0xff0000 );
 			var p1:Vector = spring.getPoint1InWorldSpace();
 			var p2:Vector = spring.getPoint2InWorldSpace();
 			currentCanvas.graphics.moveTo( p1.x, p1.y );

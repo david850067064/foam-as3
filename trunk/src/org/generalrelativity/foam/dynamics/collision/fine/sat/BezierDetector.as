@@ -37,7 +37,6 @@ package org.generalrelativity.foam.dynamics.collision.fine.sat
 {
 	import org.generalrelativity.foam.dynamics.collision.IFineCollisionDetector;
 	import org.generalrelativity.foam.dynamics.element.body.CubicBezierCurve;
-	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import org.generalrelativity.foam.dynamics.element.body.Circle;
 	import org.generalrelativity.foam.dynamics.element.IBody;
 
