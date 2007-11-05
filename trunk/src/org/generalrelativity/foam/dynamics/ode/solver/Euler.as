@@ -57,7 +57,7 @@ package org.generalrelativity.foam.dynamics.ode.solver
 			super( ode );
 			try{
 				//try to create an Array only as long as we need
-				derivative = new Array( ode.state.length );
+				derivative = new Array( _ode.state.length );
 			} catch( error:Error ) {
 				//otherwise create an open ended array
 				derivative = new Array();
@@ -74,9 +74,9 @@ package org.generalrelativity.foam.dynamics.ode.solver
 		{
 			
 			//get the original state
-			var state:Array = ode.state;
+			var state:Array = _ode.state;
 			//get the derivative based on that state
-			ode.getDerivative( state, derivative ); 
+			_ode.getDerivative( state, derivative ); 
 			
 			var i:int = -1;
 			while( ++i < state.length )

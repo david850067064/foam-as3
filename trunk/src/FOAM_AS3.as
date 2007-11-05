@@ -4,7 +4,7 @@ package {
 	import flash.display.StageAlign;
 	import example.SimpleExample;
 
-	[SWF( backgroundColor="#ececed" )] 
+	[SWF( backgroundColor="#ececed", width="800", height="600" )] 
 	public class FOAM_AS3 extends Sprite
 	{
 		

@@ -86,13 +86,13 @@ package org.generalrelativity.foam.dynamics.ode.solver
 		{
 			
 			//create an Array to hold interim states
-			var tempState:Array = new Array( ode.state.length );
+			var tempState:Array = new Array( _ode.state.length );
 			//grab the current state of the equation
-			var state:Array = ode.state;
+			var state:Array = _ode.state;
 			
 			var i:int = -1;
 			//evaluate the derivative at this state
-			ode.getDerivative( state, k1 );
+			_ode.getDerivative( state, k1 );
 			while( ++i < state.length )
 			{
 				//iterate over each state/derivative to find a state halfway through
@@ -102,7 +102,7 @@ package org.generalrelativity.foam.dynamics.ode.solver
 			
 			i = -1;
 			//use that temporary half-way state to evaluate another derivative
-			ode.getDerivative( tempState, k2 );
+			_ode.getDerivative( tempState, k2 );
 			while( ++i < state.length )
 			{
 				//iterate over each state/derivative pair to find a second state
@@ -113,7 +113,7 @@ package org.generalrelativity.foam.dynamics.ode.solver
 			i = -1;
 			//use the second found half-step state to find a derivative at the end
 			//of the interval
-			ode.getDerivative( tempState, k3 );
+			_ode.getDerivative( tempState, k3 );
 			while( ++i < state.length )
 			{
 				tempState[ i ] = state[ i ] + k3[ i ] * dt;
@@ -121,7 +121,7 @@ package org.generalrelativity.foam.dynamics.ode.solver
 			
 			i = -1;
 			//use the end derivative interval to evaluate one last derivative
-			ode.getDerivative( tempState, k4 );
+			_ode.getDerivative( tempState, k4 );
 			while( ++i < state.length )
 			{
 				//finally, advance the actual state of the equation by an average of the

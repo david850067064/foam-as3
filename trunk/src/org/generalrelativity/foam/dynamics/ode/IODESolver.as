@@ -42,6 +42,13 @@ package org.generalrelativity.foam.dynamics.ode
 		 * */
 		function step( dt:Number ) : void;
 		
+		/**
+		 * Gets the equation being solved
+		 * 
+		 * @return the differential equation this solver advances
+		 * */
+		function get ode() : IODE;
+		
 	}
 	
 }
