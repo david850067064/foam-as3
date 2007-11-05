@@ -49,7 +49,6 @@ package org.generalrelativity.foam.dynamics.element.body
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.math.RotationMatrix;
 	import org.generalrelativity.foam.util.ShapeUtil;
-	import org.generalrelativity.foam.util.RenderingUtil;
 	import org.generalrelativity.foam.util.MathUtil;
 	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;

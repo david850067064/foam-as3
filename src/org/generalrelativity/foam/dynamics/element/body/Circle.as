@@ -30,9 +30,9 @@ THE SOFTWARE.
  * */
 package org.generalrelativity.foam.dynamics.element.body
 {
+	
 	import flash.display.Graphics;
 	import org.generalrelativity.foam.math.RotationMatrix;
-	import org.generalrelativity.foam.util.RenderingUtil;
 	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;
 	

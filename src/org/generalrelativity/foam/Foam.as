@@ -45,7 +45,6 @@ package org.generalrelativity.foam
 	import org.generalrelativity.foam.view.Renderable;
 	import org.generalrelativity.foam.view.SimpleFoamRenderer;
 	import flash.display.DisplayObject;
-	import org.generalrelativity.foam.dynamics.ode.solver.Euler;
 	import flash.events.MouseEvent;
 	import org.generalrelativity.foam.dynamics.force.spring.MouseSpring;
 	import org.generalrelativity.foam.math.Vector;
@@ -380,6 +379,11 @@ package org.generalrelativity.foam
 		public function setCollisionFactory( factory:ICollisionFactory ) : void
 		{
 			_engine.setCollisionFactory( factory );
+		}
+		
+		public function setEngineSolverIterations( solverIterations:Number ) : void
+		{
+			_engine.solverIterations = solverIterations;
 		}
 		
 		public function get engine() : PhysicsEngine

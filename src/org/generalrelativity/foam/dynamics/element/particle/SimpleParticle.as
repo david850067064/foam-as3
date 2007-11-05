@@ -51,7 +51,6 @@ package org.generalrelativity.foam.dynamics.element.particle
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.dynamics.force.IForceGenerator;
-	import org.generalrelativity.foam.util.RenderingUtil;
 	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.util.MathUtil;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;

@@ -53,11 +53,8 @@ THE SOFTWARE.
 package org.generalrelativity.foam.dynamics
 {
 	
-	import org.generalrelativity.foam.dynamics.ode.IODE;
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import org.generalrelativity.foam.dynamics.ode.IODESolver;
-	import org.generalrelativity.foam.dynamics.ode.solver.RK4;
-	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import org.generalrelativity.foam.dynamics.collision.IFineCollisionDetector;
 	import org.generalrelativity.foam.dynamics.collision.CollisionResolver;
 	import org.generalrelativity.foam.dynamics.collision.ICoarseCollisionDetector;

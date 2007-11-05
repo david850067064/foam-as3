@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="IBody,org.generalrelativity.foam.dynamics.element.IBody,q,av,I,inverseI,vertices,edges,rotation,addTorque,clearTorque,addForceAtPoint,getVelocityAtPoint" name="keywords">
+<title>org.generalrelativity.foam.dynamics.element.IBody</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'IBody - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?org/generalrelativity/foam/dynamics/element/IBody.html&amp;org/generalrelativity/foam/dynamics/element/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Interface&nbsp;IBody</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Interface IBody"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.generalrelativity.foam.dynamics.element</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public interface IBody extends <a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implementors</td><td><a href="body/RigidBody.html">RigidBody</a></td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#av">av</a> : Number<div class="summaryTableDescription"> Gets the angular velocity of the body </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#collisionTypeID">collisionTypeID</a> : String<div class="summaryTableDescription"> Gets the collision type id used to map element to an appropriate collision detector </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#edges">edges</a> : Array<div class="summaryTableDescription">[read-only] Gets all edges associated with the body </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#elasticity">elasticity</a> : Number<div class="summaryTableDescription"> Gets the elasticity of the element (bounciness- used in collision reaction) </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#force">force</a> : <a href="../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription"> Gets the sum of all forces currently accumulated on the element </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#friction">friction</a> : Number<div class="summaryTableDescription"> Gets the frictional coefficient of the element (used in collision response) </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#I">I</a> : Number<div class="summaryTableDescription">[read-only] Gets the inertia tensor of the body (rotational equivalent to mass) </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#inverseI">inverseI</a> : Number<div class="summaryTableDescription">[read-only] Gets the inverse inertia tensor of the body </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#inverseMass">inverseMass</a> : Number<div class="summaryTableDescription"> Gets the element's inverse mass </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#mass">mass</a> : Number<div class="summaryTableDescription"> Gets the element's mass </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#position">position</a> : <a href="../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription"> Gets the position as a Vector- note that this is read-only </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#q">q</a> : Number<div class="summaryTableDescription"> Gets the rotation (in radians) of the body </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rotation">rotation</a> : <a href="../../math/RotationMatrix.html">RotationMatrix</a>
+<div class="summaryTableDescription">[read-only] Gets the rotation matrix of the body (used to transform its geometry) </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#velocity">velocity</a> : <a href="../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription"> Gets the velocity as a Vector- note that this is read-only </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#vertices">vertices</a> : Array<div class="summaryTableDescription">[read-only] Gets all vertices associated with the body </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#vx">vx</a> : Number<div class="summaryTableDescription"> Gets the horizontal velocity </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#vy">vy</a> : Number<div class="summaryTableDescription"> Gets the vertical velocity </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#x">x</a> : Number<div class="summaryTableDescription"> Gets x positon </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ISimulatable.html#y">y</a> : Number<div class="summaryTableDescription"> Gets the y position </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ISimulatable.html#accumulateForces()">accumulateForces</a>():void</div>
+<div class="summaryTableDescription"> Accumulates forces from all IForceGenerators </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ISimulatable.html#addForce()">addForce</a>(force:<a href="../../math/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription"> Adds a force to the element (Acceleration = Force / Mass) </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addForceAtPoint()">addForceAtPoint</a>(point:<a href="../../math/Vector.html">Vector</a>, force:<a href="../../math/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription"> Adds force at a specific point on the body (affects linear and (possibly) angular momentum) </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ISimulatable.html#addForceGenerator()">addForceGenerator</a>(generator:<a href="../force/IForceGenerator.html">IForceGenerator</a>):void</div>
+<div class="summaryTableDescription"> Adds an IForceGenerator to the element </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addTorque()">addTorque</a>(torque:Number):void</div>
+<div class="summaryTableDescription"> Adds torque to the body </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ISimulatable.html#clearForces()">clearForces</a>():void</div>
+<div class="summaryTableDescription"> Clears the force accumulation </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clearTorque()">clearTorque</a>():void</div>
+<div class="summaryTableDescription"> Clears all torque </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getVelocityAtPoint()">getVelocityAtPoint</a>(point:<a href="../../math/Vector.html">Vector</a>):<a href="../../math/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription"> Gets the velocity at the given point </div>
+</td><td class="summaryTableOwnerCol">IBody</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ISimulatable.html#removeForceGenerator()">removeForceGenerator</a>(generator:<a href="../force/IForceGenerator.html">IForceGenerator</a>):void</div>
+<div class="summaryTableDescription"> Removes an IForceGenerator from the element </div>
+</td><td class="summaryTableOwnerCol"><a href="ISimulatable.html">ISimulatable</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="av"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">av</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>av:Number</code>&nbsp;&nbsp;[read-write]<p> Gets the angular velocity of the body </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get av():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set av(value:Number):void</code>
+<br>
+</div>
+<a name="edges"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">edges</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>edges:Array</code>&nbsp;&nbsp;[read-only]<p> Gets all edges associated with the body </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get edges():Array</code>
+<br>
+</div>
+<a name="I"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">I</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>I:Number</code>&nbsp;&nbsp;[read-only]<p> Gets the inertia tensor of the body (rotational equivalent to mass) </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get I():Number</code>
+<br>
+</div>
+<a name="inverseI"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">inverseI</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>inverseI:Number</code>&nbsp;&nbsp;[read-only]<p> Gets the inverse inertia tensor of the body </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get inverseI():Number</code>
+<br>
+</div>
+<a name="q"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">q</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>q:Number</code>&nbsp;&nbsp;[read-write]<p> Gets the rotation (in radians) of the body </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get q():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set q(value:Number):void</code>
+<br>
+</div>
+<a name="rotation"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>rotation:<a href="../../math/RotationMatrix.html">RotationMatrix</a></code>&nbsp;&nbsp;[read-only]<p> Gets the rotation matrix of the body (used to transform its geometry) </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get rotation():<a href="../../math/RotationMatrix.html">RotationMatrix</a></code>
+<br>
+</div>
+<a name="vertices"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">vertices</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>vertices:Array</code>&nbsp;&nbsp;[read-only]<p> Gets all vertices associated with the body </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get vertices():Array</code>
+<br>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addForceAtPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addForceAtPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addForceAtPoint(point:<a href="../../math/Vector.html">Vector</a>, force:<a href="../../math/Vector.html">Vector</a>):void</code><p> Adds force at a specific point on the body (affects linear and (possibly) angular momentum) </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:<a href="../../math/Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">force</span>:<a href="../../math/Vector.html">Vector</a></code></td>
+</tr>
+</table>
+</div>
+<a name="addTorque()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addTorque</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addTorque(torque:Number):void</code><p> Adds torque to the body </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">torque</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<a name="clearTorque()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clearTorque</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clearTorque():void</code><p> Clears all torque </p></div>
+<a name="getVelocityAtPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getVelocityAtPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getVelocityAtPoint(point:<a href="../../math/Vector.html">Vector</a>):<a href="../../math/Vector.html">Vector</a></code><p> Gets the velocity at the given point </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:<a href="../../math/Vector.html">Vector</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../math/Vector.html">Vector</a></code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

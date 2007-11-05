@@ -50,10 +50,8 @@ package org.generalrelativity.foam.dynamics.collision.fine.sat
 {
 	
 	import org.generalrelativity.foam.math.Vector;
-	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import flash.display.Graphics;
 	import org.generalrelativity.foam.math.RotationMatrix;
-	import org.generalrelativity.foam.util.RenderingUtil;
 	import flash.utils.Dictionary;
 	import org.generalrelativity.foam.dynamics.collision.CollisionResolver;
 	import org.generalrelativity.foam.dynamics.collision.Contact;

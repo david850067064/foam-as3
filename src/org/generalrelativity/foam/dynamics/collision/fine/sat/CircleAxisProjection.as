@@ -38,9 +38,9 @@ THE SOFTWARE.
  * */
 package org.generalrelativity.foam.dynamics.collision.fine.sat
 {
+	
 	import org.generalrelativity.foam.dynamics.element.body.Circle;
 	import org.generalrelativity.foam.math.Vector;
-	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import org.generalrelativity.foam.dynamics.element.IBody;
 	
 	public class CircleAxisProjection extends AxisProjection
