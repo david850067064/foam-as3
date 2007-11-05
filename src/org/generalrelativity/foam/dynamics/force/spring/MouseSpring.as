@@ -8,22 +8,22 @@ package org.generalrelativity.foam.dynamics.force.spring
 	import flash.display.DisplayObject;
 	import org.generalrelativity.foam.math.RotationMatrix;
 	import flash.display.Graphics;
+	import org.generalrelativity.foam.dynamics.element.IBody;
 
 	public class MouseSpring extends SimpleForceGenerator implements IForceGenerator
 	{
 		
-		protected var body:RigidBody;
+		protected var body:IBody;
 		protected var point:Vector;
 		protected var displayObject:DisplayObject;
 		protected var restLength:Number;
 		protected var k:Number;
 		protected var damp:Number;
 		
-		public function MouseSpring( body:RigidBody, point:Vector, displayObject:DisplayObject )
+		public function MouseSpring( body:IBody, point:Vector, displayObject:DisplayObject )
 		{
 			this.body = body;
-			var transpose:RotationMatrix = body.rotation.getTranspose();
-			this.point = transpose.getVectorProduct( point );
+			this.point = body.rotation.getTransposeVectorProduct( point );
 			this.displayObject = displayObject;
 			restLength = 40;
 			k = 0.001;
@@ -36,20 +36,27 @@ package org.generalrelativity.foam.dynamics.force.spring
 				
 			var t1:RotationMatrix = body.rotation;
 			var trans1:Vector = t1.getVectorProduct( point );
-			var pointInWorldSpace1:Vector = trans1.plus( body.position );
+			var pointInWorldSpace1:Vector = getPointInWorldSpace();
 			var diff:Vector = new Vector( pointInWorldSpace1.x - displayObject.mouseX, pointInWorldSpace1.y - displayObject.mouseY );
 			if( diff.magnitude < restLength ) return;
 			
 			_force = diff.times( -k * ( diff.magnitude - restLength ) );
 			_force.minusEquals( body.velocity.times( damp ) );
 			
-			body.addForceAtPoint( trans1, _force ); needs updating
+			body.addForceAtPoint( trans1, _force );
 			
 		}
 		
 		public function destroy() : void
 		{
 			body.removeForceGenerator( this );
+		}
+		
+		public function getPointInWorldSpace() : Vector
+		{
+			var t1:RotationMatrix = body.rotation;
+			var trans1:Vector = t1.getVectorProduct( point );
+			return trans1.plus( body.position );
 		}
 		
 	}

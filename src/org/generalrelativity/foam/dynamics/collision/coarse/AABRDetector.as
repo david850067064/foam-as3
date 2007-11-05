@@ -186,6 +186,11 @@ package org.generalrelativity.foam.dynamics.collision.coarse
 			_collidablesLength++;
 		}
 		
+		public function getDynamicCollidables() : Array
+		{
+			return _dynamicCollidables;
+		}
+		
 		/**
 		 * Removes a collidable element from coarse detection
 		 * 

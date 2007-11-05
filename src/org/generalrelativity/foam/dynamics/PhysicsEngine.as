@@ -10,12 +10,15 @@ package org.generalrelativity.foam.dynamics
 	import org.generalrelativity.foam.dynamics.collision.ICoarseCollisionDetector;
 	import org.generalrelativity.foam.dynamics.collision.coarse.AABRDetector;
 	import org.generalrelativity.foam.dynamics.collision.ICollisionFactory;
+	import org.generalrelativity.foam.dynamics.collision.fine.sat.PointPolygonDetector;
+	import org.generalrelativity.foam.math.Vector;
+	import org.generalrelativity.foam.dynamics.element.IBody;
 	
 	
 	public class PhysicsEngine
 	{
 		
-		public static const SOLVER_ITERATIONS:int = 3;
+		public static const SOLVER_ITERATIONS:int = 13;
 		public static const DEFAULT_COARSE_COLLISION_DETECTOR:Class = AABRDetector;
 		
 		private var _odeSolvers:Array;
@@ -45,10 +48,12 @@ package org.generalrelativity.foam.dynamics
 			
 			var i:int;
 			var iteration:int = 0;
+			
 			const ddt:Number = dt / PhysicsEngine.SOLVER_ITERATIONS;
 			
 			while( ++iteration <= PhysicsEngine.SOLVER_ITERATIONS )
 			{
+				
 				i = _numODESolvers;
 				while( --i > -1 )
 				{
@@ -60,7 +65,6 @@ package org.generalrelativity.foam.dynamics
 			}
 			
 		}
-		
 		
 		private function resolveCollisions() : void
 		{
@@ -89,6 +93,20 @@ package org.generalrelativity.foam.dynamics
 		public function setCollisionFactory( factory:ICollisionFactory ) : void
 		{
 			_coarseDetector.factory = factory;
+		}
+		
+		public function getBodyUnderPoint( point:Vector ) : IBody
+		{
+			var pointPolygonDetector:PointPolygonDetector;
+			for each( var collidable:ISimulatable in _coarseDetector.getDynamicCollidables() )
+			{
+				if( collidable is IBody )
+				{
+					pointPolygonDetector = new PointPolygonDetector( IBody( collidable ), point );
+					if( pointPolygonDetector.hasCollision() ) return IBody( collidable );
+				}
+			}
+			return null;
 		}
 		
 	}

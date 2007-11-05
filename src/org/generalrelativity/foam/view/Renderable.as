@@ -14,7 +14,7 @@ package org.generalrelativity.foam.view
 		
 		public function Renderable( element:*, 
 									isDynamic:Boolean = true, 
-									data:* )
+									data:* = null )
 		{
 			
 			this.element = element;

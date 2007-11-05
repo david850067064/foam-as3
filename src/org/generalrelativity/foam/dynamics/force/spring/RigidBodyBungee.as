@@ -63,16 +63,24 @@ package org.generalrelativity.foam.dynamics.force.spring
 		{
 			const t1:RotationMatrix = IBody( element1 ).rotation;
 			var trans1:Vector = t1.getVectorProduct( point1 );
-			var pointInWorldSpace1:Vector = trans1.plus( new Vector( element1.x, element1.y ) );
+			var pointInWorldSpace1:Vector = trans1.plus( element1.position );
 			const t2:RotationMatrix = IBody( element2 ).rotation;
 			var trans2:Vector = t2.getVectorProduct( point2 );
-			var pointInWorldSpace2:Vector = trans2.plus( new Vector( element2.x, element2.y ) );
+			var pointInWorldSpace2:Vector = trans2.plus( element2.position );
 			var diff:Vector = new Vector( pointInWorldSpace1.x - pointInWorldSpace2.x, pointInWorldSpace1.y - pointInWorldSpace2.y );
 			var magnitude:Number = diff.magnitude;
 			if( magnitude <= _restLength ) return;
 			_force = diff.times( -k * ( diff.magnitude - _restLength ) );
 			_force.minusEquals( IBody( element1 ).getVelocityAtPoint( trans1 ).times( damp ) );
 			IBody( element1 ).addForceAtPoint( trans1, _force );
+		}
+		
+		
+		
+		override public function clone( invert:Boolean = true ) : Spring
+		{
+			if( invert ) return new RigidBodyBungee( IBody( element2 ), point2, IBody( element1 ), point1, k, damp );
+			return new RigidBodyBungee( IBody( element1 ), point1, IBody( element2 ), point2, k, damp );
 		}
 		
 	}

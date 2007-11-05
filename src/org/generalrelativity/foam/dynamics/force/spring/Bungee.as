@@ -44,7 +44,6 @@ package org.generalrelativity.foam.dynamics.force.spring
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.dynamics.element.IBody;
 	import org.generalrelativity.foam.math.RotationMatrix;
-	import org.generalrelativity.foam.dynamics.element.IRenderable;
 	import flash.display.Graphics;
 	
 	public class Bungee extends Spring
