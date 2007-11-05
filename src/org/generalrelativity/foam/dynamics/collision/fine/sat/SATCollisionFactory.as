@@ -101,9 +101,6 @@ package org.generalrelativity.foam.dynamics.collision.fine.sat
 		public function getCollisionDetector( element1:ISimulatable, element2:ISimulatable ) : IFineCollisionDetector
 		{
 			
-			var id1:String;
-			var id2:String;
-			
 			var detectorClass:Class = detectorMap[ element1.collisionTypeID ][ element2.collisionTypeID ];
 			
 			//circle and bezier detectors expect the circle and curve respectively first
