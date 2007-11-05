@@ -90,7 +90,7 @@ package org.generalrelativity.foam.dynamics.element.particle
 											y:Number, 
 											vx:Number = 0, 
 											vy:Number = 0, 
-											mass:Number = 5, 
+											mass:Number = 100, 
 											friction:Number = 0.2,
 											elasticity:Number = 0.25,
 											stateLength:uint = 4 )

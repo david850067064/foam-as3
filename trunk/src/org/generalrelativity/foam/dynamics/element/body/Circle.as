@@ -67,7 +67,7 @@ package org.generalrelativity.foam.dynamics.element.body
 		public function Circle( x:Number, 
 								y:Number, 
 								radius:Number,
-								mass:Number = 10, 
+								mass:Number = 100, 
 								vx:Number = 0, 
 								vy:Number = 0, 
 								friction:Number = 0.5,
@@ -77,7 +77,7 @@ package org.generalrelativity.foam.dynamics.element.body
 		{
 			this.radius = radius;
 			//no vertices- set to null
-			super( x, y, mass, null, vx, vy, fiction, elasticity, q, av );
+			super( x, y, mass, null, vx, vy, friction, elasticity, q, av );
 			
 		}
 		

@@ -41,8 +41,7 @@ THE SOFTWARE.
  * */
 package org.generalrelativity.foam.dynamics.element.body
 {
-	
-}
+
 	import org.generalrelativity.foam.dynamics.element.particle.SimpleParticle;
 	import org.generalrelativity.foam.dynamics.ode.IODE;
 	import org.generalrelativity.foam.dynamics.element.IBody;
@@ -95,7 +94,7 @@ package org.generalrelativity.foam.dynamics.element.body
 		 * */
 		public function RigidBody( 	x:Number, 
 									y:Number, 
-									mass:Number = 10, 
+									mass:Number = 100, 
 									vertices:Array = null,
 									vx:Number = 0, 
 									vy:Number = 0, 

@@ -126,6 +126,16 @@ package org.generalrelativity.foam.dynamics.force.spring
 			element1.addForceGenerator( this );
 		}
 		
+		public function getPoint1InWorldSpace() : Vector
+		{
+			return element1.position;
+		}
+		
+		public function getPoint2InWorldSpace() : Vector
+		{
+			return element2.position;
+		}
+		
 		/**
 		 * Creates forces for both elements
 		 * */

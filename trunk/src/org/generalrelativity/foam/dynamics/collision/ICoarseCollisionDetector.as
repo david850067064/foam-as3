@@ -80,6 +80,13 @@ package org.generalrelativity.foam.dynamics.collision
 		function getCandidates() : Array;
 		
 		/**
+		 * Gets dynamic collidable elements
+		 * 
+		 * @return Array of all dynamic elements
+		 * */
+		function getDynamicCollidables() : Array;
+		
+		/**
 		 * Sets the ICollisionFactory used to return a certain type of IFineCollisionDetectors.
 		 * 
 		 * <p>

@@ -9,6 +9,11 @@ package org.generalrelativity.foam.view
 	import org.generalrelativity.foam.math.RotationMatrix;
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.util.RenderingUtil;
+	import org.generalrelativity.foam.dynamics.force.spring.MouseSpring;
+	import org.generalrelativity.foam.dynamics.force.spring.Spring;
+	import org.generalrelativity.foam.dynamics.force.spring.Bungee;
+	import org.generalrelativity.foam.dynamics.force.spring.RigidBodySpring;
+	import org.generalrelativity.foam.dynamics.force.spring.RigidBodyBungee;
 
 	public class SimpleFoamRenderer extends Sprite implements IFoamRenderer
 	{
@@ -18,11 +23,13 @@ package org.generalrelativity.foam.view
 		protected var staticCanvas:Sprite;
 		protected var dynamicCanvas:Sprite;
 		protected var currentCanvas:Sprite;
+		protected var auxillaryCanvas:Sprite;
 		
 		public function SimpleFoamRenderer()
 		{
 			staticCanvas = addChild( new Sprite() ) as Sprite;
 			dynamicCanvas = addChild( new Sprite() ) as Sprite;
+			auxillaryCanvas = addChild( new Sprite() ) as Sprite;
 			_staticRenderables = new Array();
 			_dynamicRenderables = new Array();
 		}
@@ -48,8 +55,9 @@ package org.generalrelativity.foam.view
 		
 		public function redraw() : void
 		{
+			auxillaryCanvas.graphics.clear();
+			dynamicCanvas.graphics.clear();
 			currentCanvas = dynamicCanvas;
-			currentCanvas.graphics.clear();
 			_dynamicRenderables.forEach( proxy );
 		}
 		
@@ -72,6 +80,36 @@ package org.generalrelativity.foam.view
 				
 				case RigidBody :
 				drawPolygon( RigidBody( renderable.element ) );
+				break;
+				
+				case Spring :
+				currentCanvas = auxillaryCanvas;
+				drawSpring( Spring( renderable.element ) );
+				currentCanvas = dynamicCanvas;
+				break;
+				
+				case Bungee :
+				currentCanvas = auxillaryCanvas;
+				drawSpring( Spring( renderable.element ) );
+				currentCanvas = dynamicCanvas;
+				break;
+				
+				case RigidBodySpring :
+				currentCanvas = auxillaryCanvas;
+				drawSpring( Spring( renderable.element ) );
+				currentCanvas = dynamicCanvas;
+				break;
+				
+				case RigidBodyBungee : 
+				currentCanvas = auxillaryCanvas;
+				drawSpring( Spring( renderable.element ) );
+				currentCanvas = dynamicCanvas;
+				break;
+				
+				case MouseSpring :
+				currentCanvas = auxillaryCanvas;
+				drawMouseSpring( MouseSpring( renderable.element ) );
+				currentCanvas = dynamicCanvas;
 				break;
 				
 			}
@@ -115,7 +153,22 @@ package org.generalrelativity.foam.view
 			
 		}
 		
+		protected function drawMouseSpring( mouseSpring:MouseSpring ) : void
+		{
+			currentCanvas.graphics.lineStyle( 3, 0xff0000 );
+			var pointInWorldSpace:Vector = mouseSpring.getPointInWorldSpace();
+			currentCanvas.graphics.moveTo( pointInWorldSpace.x, pointInWorldSpace.y );
+			currentCanvas.graphics.lineTo( mouseX, mouseY );
+		}
 		
+		protected function drawSpring( spring:Spring ) : void
+		{
+			currentCanvas.graphics.lineStyle( 3, 0xff0000 );
+			var p1:Vector = spring.getPoint1InWorldSpace();
+			var p2:Vector = spring.getPoint2InWorldSpace();
+			currentCanvas.graphics.moveTo( p1.x, p1.y );
+			currentCanvas.graphics.lineTo( p2.x, p2.y );
+		}
 		
 		public function get renderables() : Array
 		{
@@ -131,7 +184,6 @@ package org.generalrelativity.foam.view
 			}
 			
 		}
-		
 		
 		
 	}

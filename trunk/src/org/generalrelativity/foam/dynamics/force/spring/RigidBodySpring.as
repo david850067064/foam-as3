@@ -82,5 +82,25 @@ package org.generalrelativity.foam.dynamics.force.spring
 			IBody( element1 ).addForceAtPoint( trans1, _force );
 		}
 		
+		override public function getPoint1InWorldSpace() : Vector
+		{
+			var t:RotationMatrix = IBody( element1 ).rotation;
+			var trans:Vector = t.getVectorProduct( point1 );
+			return trans.plus( element1.position );
+		}
+		
+		override public function getPoint2InWorldSpace() : Vector
+		{
+			var t:RotationMatrix = IBody( element2 ).rotation;
+			var trans:Vector = t.getVectorProduct( point2 );
+			return trans.plus( element2.position );
+		}
+		
+		override public function clone( invert:Boolean = true ) : Spring
+		{
+			if( invert ) return new RigidBodySpring( IBody( element2 ), point2, IBody( element1 ), point1, k, damp );
+			return new RigidBodySpring( IBody( element1 ), point1, IBody( element2 ), point2, k, damp );
+		}
+		
 	}
 }

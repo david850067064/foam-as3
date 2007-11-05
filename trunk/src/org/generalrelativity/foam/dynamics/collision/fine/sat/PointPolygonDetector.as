@@ -34,19 +34,21 @@ THE SOFTWARE.
  * */
 package org.generalrelativity.foam.dynamics.collision.fine.sat
 {
+	
 	import org.generalrelativity.foam.dynamics.element.body.RigidBody;
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.math.RotationMatrix;
 	import org.generalrelativity.foam.dynamics.element.body.Circle;
+	import org.generalrelativity.foam.dynamics.element.IBody;
 
 	public class PointPolygonDetector
 	{
 		
-		protected var body:RigidBody;
+		protected var body:IBody;
 		protected var point:Vector;
 		protected static const EPSILON:Number = 15;
 		
-		public function PointPolygonDetector( body:RigidBody, point:Vector )
+		public function PointPolygonDetector( body:IBody, point:Vector )
 		{
 			this.body = body;
 			this.point = point;
