@@ -54,11 +54,14 @@ package org.generalrelativity.foam
 	import org.generalrelativity.foam.dynamics.force.IForceGenerator;
 	import org.generalrelativity.foam.util.SimpleMap;
 
+	[Event(name="step", type="flash.events.Event")]
 	public class Foam extends Sprite
 	{
 		
 		/** offers a default solver class for differential equations **/
 		public static const DEFAULT_ODE_SOLVER:Class = RK4;
+		/** step event **/
+		public static const STEP:String = "step";
 		
 		/** maps ISimulatables to IODESolvers for intefacing with <code>PhysicsEngine</code> **/
 		private var _solverMap:SimpleMap;
@@ -350,12 +353,14 @@ package org.generalrelativity.foam
 		{
 			_engine.step( _timestep );
 			_renderer.redraw();
+			dispatchEvent( new Event( Foam.STEP ) );
 		}
 		
 		public function stepBackward( event:Event = null ) : void
 		{
 			_engine.step( -_timestep );
 			_renderer.redraw();
+			dispatchEvent( new Event( Foam.STEP ) );
 		}
 		
 		public function get timestep() : Number { return _timestep; }
@@ -415,6 +420,11 @@ package org.generalrelativity.foam
 		public function set solverIterations( value:int ) : void
 		{
 			_engine.solverIterations = value;
+		}
+		
+		public function get simulatables() : Array
+		{
+			return _solverMap.keys;
 		}
 		
 		/**

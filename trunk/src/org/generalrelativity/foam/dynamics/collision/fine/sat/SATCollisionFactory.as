@@ -104,22 +104,13 @@ package org.generalrelativity.foam.dynamics.collision.fine.sat
 			var id1:String;
 			var id2:String;
 			
-			//circle and bezier detectors expect the circle and curve respectively first
-			if( element2 is Circle || element2 is CubicBezierCurve )
-			{
-				id1 = element2.collisionTypeID;
-				id2 = element1.collisionTypeID;
-			}
-			else
-			{
-				id1 = element1.collisionTypeID;
-				id2 = element2.collisionTypeID;
-			}
+			var detectorClass:Class = detectorMap[ element1.collisionTypeID ][ element2.collisionTypeID ];
 			
-			//map to the appropriate detection class
-			var detectorClass:Class = detectorMap[ id1 ][ id2 ];
-			//return a new instance of this
-			return IFineCollisionDetector( new detectorClass( element1, element2 ) );
+			//circle and bezier detectors expect the circle and curve respectively first
+			if( element2 is Circle || element2 is CubicBezierCurve ) return IFineCollisionDetector( new detectorClass( element2, element1 ) );
+			else return IFineCollisionDetector( new detectorClass( element1, element2 ) );
+			
+			return null;
 			
 		}
 		
