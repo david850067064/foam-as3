@@ -54,7 +54,8 @@ package org.generalrelativity.foam.view
 			
 			this.element = element;
 			this.isDynamic = isDynamic;
-			this.data = data;
+			if( data ) this.data = data;
+			else this.data = new Object();
 			this.renderMethodKey = getDefinitionByName( getQualifiedClassName( element ) ) as Class;
 			
 		}

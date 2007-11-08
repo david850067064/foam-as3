@@ -52,6 +52,8 @@ package org.generalrelativity.foam.view
 	public class SimpleFoamRenderer extends Sprite implements IFoamRenderer
 	{
 		
+		public static const DEFAULT_COLOR:uint = 0xffffff;
+		
 		protected var _staticRenderables:Array;
 		protected var _dynamicRenderables:Array;
 		protected var staticCanvas:Sprite;
@@ -70,6 +72,8 @@ package org.generalrelativity.foam.view
 		
 		public function addRenderable( renderable:Renderable ) : void
 		{
+			if( !renderable.data.color ) renderable.data.color = SimpleFoamRenderer.DEFAULT_COLOR;
+			if( !renderable.data.alpha ) renderable.data.alpha = 0.5;
 			if( renderable.isDynamic ) _dynamicRenderables.push( renderable );
 			else _staticRenderables.push( renderable );
 		}
@@ -109,11 +113,11 @@ package org.generalrelativity.foam.view
 			{
 				
 				case Circle :
-				drawCircle( Circle( renderable.element ) );
+				drawCircle( Circle( renderable.element ), renderable.data.color, renderable.data.alpha );
 				break;
 				
 				case RigidBody :
-				drawPolygon( RigidBody( renderable.element ) );
+				drawPolygon( RigidBody( renderable.element ), renderable.data.color, renderable.data.alpha );
 				break;
 				
 				case Spring :
@@ -149,23 +153,23 @@ package org.generalrelativity.foam.view
 			}
 		}
 		
-		protected function drawCircle( circle:Circle, color:uint = 0xffffff ) : void
+		protected function drawCircle( circle:Circle, color:uint, alpha:Number ) : void
 		{
 			currentCanvas.graphics.lineStyle( 1, 0x333333 );
-			currentCanvas.graphics.beginFill( color );
+			currentCanvas.graphics.beginFill( color, alpha );
 			currentCanvas.graphics.drawCircle( circle.x, circle.y, circle.radius );
 			currentCanvas.graphics.endFill();
 			currentCanvas.graphics.beginFill( 0xffffff );
-			RenderingUtil.drawHash( currentCanvas.graphics, circle.x, circle.y, circle.rotation, 20 );
+			RenderingUtil.drawHash( currentCanvas.graphics, circle.x, circle.y, circle.rotation, 10 );
 			currentCanvas.graphics.endFill();
 		}
 		
 		
-		protected function drawPolygon( polygon:RigidBody, color:uint = 0xffffff ) : void
+		protected function drawPolygon( polygon:RigidBody, color:uint, alpha:Number ) : void
 		{
 			
 			currentCanvas.graphics.lineStyle( 3, 0x333333, 0.4 );
-			currentCanvas.graphics.beginFill( color );
+			currentCanvas.graphics.beginFill( color, alpha );
 			
 			var transform:RotationMatrix = polygon.rotation;
 			var transformed:Vector = transform.getVectorProduct( polygon.vertices[ 0 ] as Vector );

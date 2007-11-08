@@ -6,6 +6,7 @@ package
 	import flash.display.StageAlign;
 	import example.ZeroGravityToyChest;
 	import example.PerpetualFall;
+	import example.orbit.SimpleOrbit;
 
 	[SWF( backgroundColor="#ececed", width="800", height="600" )] 
 	public class FOAM_AS3 extends Sprite
@@ -18,8 +19,7 @@ package
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
 			
-			//addChild( new ZeroGravityToyChest() );
-			addChild( new PerpetualFall() );
+			addChild( new SimpleOrbit() );
 			
 		}
 		

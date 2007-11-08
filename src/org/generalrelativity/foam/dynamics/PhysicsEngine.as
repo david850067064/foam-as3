@@ -178,7 +178,7 @@ package org.generalrelativity.foam.dynamics
 				}
 				
 				//resolve any collisions at the end of this mini-step
-				resolveCollisions();
+				if( _coarseDetector ) resolveCollisions();
 				
 			}
 			
