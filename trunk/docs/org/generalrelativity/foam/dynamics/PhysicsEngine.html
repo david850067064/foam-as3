@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="PhysicsEngine,org.generalrelativity.foam.dynamics.PhysicsEngine,SOLVER_ITERATIONS,DEFAULT_COARSE_COLLISION_DETECTOR,solverIterations,addODESolver,addCollidable,step,removeODESolver,removeCollidable,setCoarseCollisionDetector,setCollisionFactory,getBodyUnderPoint" name="keywords">
+<title>org.generalrelativity.foam.dynamics.PhysicsEngine</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'PhysicsEngine - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?org/generalrelativity/foam/dynamics/PhysicsEngine.html&amp;org/generalrelativity/foam/dynamics/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;PhysicsEngine</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class PhysicsEngine"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.generalrelativity.foam.dynamics</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class PhysicsEngine</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#solverIterations">solverIterations</a> : int<div class="summaryTableDescription">[write-only]
+   Sets the number of times the timestep is subdivided and collision is checked
+   
+   </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#PhysicsEngine()">PhysicsEngine</a>()</div>
+<div class="summaryTableDescription">
+   Creates a new Physics Engine
+   
+   <p>
+   This should be viewed as a work in progress.</div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addCollidable()">addCollidable</a>(collidable:<a href="element/ISimulatable.html">ISimulatable</a>):void</div>
+<div class="summaryTableDescription">
+   Adds a collidable element to the engine.</div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addODESolver()">addODESolver</a>(solver:<a href="ode/IODESolver.html">IODESolver</a>):void</div>
+<div class="summaryTableDescription">
+   Adds an IODESolver to the engine.</div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getBodyUnderPoint()">getBodyUnderPoint</a>(point:<a href="../math/Vector.html">Vector</a>):<a href="element/IBody.html">IBody</a>
+</div>
+<div class="summaryTableDescription">
+   Gets an IBody that collides with the given point, if any
+   
+   </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeCollidable()">removeCollidable</a>(collidable:<a href="element/ISimulatable.html">ISimulatable</a>):void</div>
+<div class="summaryTableDescription">
+   Removes a collidable element from simulation
+   
+   </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeODESolver()">removeODESolver</a>(solver:<a href="ode/IODESolver.html">IODESolver</a>):void</div>
+<div class="summaryTableDescription">
+   Removes an IODESolver from the simulation
+   
+   </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setCoarseCollisionDetector()">setCoarseCollisionDetector</a>(detector:<a href="collision/ICoarseCollisionDetector.html">ICoarseCollisionDetector</a>):void</div>
+<div class="summaryTableDescription">
+   Sets the engine's coarse collision detector
+   
+   </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setCollisionFactory()">setCollisionFactory</a>(factory:<a href="collision/ICollisionFactory.html">ICollisionFactory</a>):void</div>
+<div class="summaryTableDescription">
+   Defines the collision factory used by the coarse detector to return IFineCollisionDetectors
+   
+   </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#step()">step</a>(dt:Number = 1.0):void</div>
+<div class="summaryTableDescription">
+   This seemingly harmless little method is the heart of the physics simulation.</div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEFAULT_COARSE_COLLISION_DETECTOR">DEFAULT_COARSE_COLLISION_DETECTOR</a> : Class<div class="summaryTableDescription">[static] offers a default ICoarseCollisionDetector class </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#SOLVER_ITERATIONS">SOLVER_ITERATIONS</a> : int = 3<div class="summaryTableDescription">[static] offers a default number of iterations per frame </div>
+</td><td class="summaryTableOwnerCol">PhysicsEngine</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="solverIterations"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">solverIterations</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>solverIterations:int</code>&nbsp;&nbsp;[write-only]<p>
+   Sets the number of times the timestep is subdivided and collision is checked
+   
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set solverIterations(value:int):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../dynamics/PhysicsEngine.html#step" target="">step</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="PhysicsEngine()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PhysicsEngine</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function PhysicsEngine()</code><p>
+   Creates a new Physics Engine
+   
+   </p><p>
+   This should be viewed as a work in progress. It currently uses
+   a less-than-desirable approach to contact resolution. All 
+   functionality is pretty well broken out and shouldn't affect
+   the user even given radical changes in future releases
+   </p>
+   
+   <p>
+   Instantiation is typically handled through the Foam interface.
+   </p>
+   
+   <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">Foam</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addCollidable()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addCollidable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addCollidable(collidable:<a href="element/ISimulatable.html">ISimulatable</a>):void</code><p>
+   Adds a collidable element to the engine. Because the engine 
+   draws a distinction between solvers and collidable elements, 
+   collidable elements can be added without needing its state
+   solved and vice versa.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">collidable</span>:<a href="element/ISimulatable.html">ISimulatable</a></code> &mdash; ISimulatable to add to collision list
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">IODESolver<br>addCollidable<br>ICoarseCollisionDetector</div>
+</div>
+<a name="addODESolver()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addODESolver</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addODESolver(solver:<a href="ode/IODESolver.html">IODESolver</a>):void</code><p>
+   Adds an IODESolver to the engine. Because the engine draws
+   a distinction between solvers and collidable elements, 
+   IODESolvers can be added without being tested/solved for
+   collision and vice versa.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">solver</span>:<a href="ode/IODESolver.html">IODESolver</a></code> &mdash; IODESolver to add
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">IODESolver<br>addCollidable<br>Foam.addElement</div>
+</div>
+<a name="getBodyUnderPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getBodyUnderPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getBodyUnderPoint(point:<a href="../math/Vector.html">Vector</a>):<a href="element/IBody.html">IBody</a></code><p>
+   Gets an IBody that collides with the given point, if any
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:<a href="../math/Vector.html">Vector</a></code> &mdash; Vector to check against all bodies
+   
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="element/IBody.html">IBody</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">PointPolygonDetector</div>
+</div>
+<a name="removeCollidable()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeCollidable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeCollidable(collidable:<a href="element/ISimulatable.html">ISimulatable</a>):void</code><p>
+   Removes a collidable element from simulation
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">collidable</span>:<a href="element/ISimulatable.html">ISimulatable</a></code> &mdash; element to remove
+   </td>
+</tr>
+</table>
+</div>
+<a name="removeODESolver()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeODESolver</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeODESolver(solver:<a href="ode/IODESolver.html">IODESolver</a>):void</code><p>
+   Removes an IODESolver from the simulation
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">solver</span>:<a href="ode/IODESolver.html">IODESolver</a></code> &mdash; IODESolver to remove
+   </td>
+</tr>
+</table>
+</div>
+<a name="setCoarseCollisionDetector()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setCoarseCollisionDetector</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setCoarseCollisionDetector(detector:<a href="collision/ICoarseCollisionDetector.html">ICoarseCollisionDetector</a>):void</code><p>
+   Sets the engine's coarse collision detector
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">detector</span>:<a href="collision/ICoarseCollisionDetector.html">ICoarseCollisionDetector</a></code> &mdash; ICoarseCollisionDetector to handle broad phase culling
+   </td>
+</tr>
+</table>
+</div>
+<a name="setCollisionFactory()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setCollisionFactory</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setCollisionFactory(factory:<a href="collision/ICollisionFactory.html">ICollisionFactory</a>):void</code><p>
+   Defines the collision factory used by the coarse detector to return IFineCollisionDetectors
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">factory</span>:<a href="collision/ICollisionFactory.html">ICollisionFactory</a></code> &mdash; CollisionFactory
+   </td>
+</tr>
+</table>
+</div>
+<a name="step()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">step</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function step(dt:Number = 1.0):void</code><p>
+   This seemingly harmless little method is the heart of the physics simulation. 
+   
+   </p><p>
+   It takes a stepsize over which to advance the state of the system. 
+   The more discrete the time step (and resultant subdivided timesteps 
+   based on <code>_solverIterations</code>) the more realistic the 
+   simulation. Realism comes at the cost of performance.
+   </p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">dt</span>:Number</code> (default = <code>1.0</code>)<code></code> &mdash; timestep with which to advance the system
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">Foam.stepForward<br>Foam.stepBackward<br>IODESolver.step<br>
+<a href="../dynamics/PhysicsEngine.html#resolveCollisions" target="">resolveCollisions</a>
+</div>
+</div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="DEFAULT_COARSE_COLLISION_DETECTOR"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEFAULT_COARSE_COLLISION_DETECTOR</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEFAULT_COARSE_COLLISION_DETECTOR:Class</code><p> offers a default ICoarseCollisionDetector class </p></div>
+<a name="SOLVER_ITERATIONS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SOLVER_ITERATIONS</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const SOLVER_ITERATIONS:int = 3</code><p> offers a default number of iterations per frame </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

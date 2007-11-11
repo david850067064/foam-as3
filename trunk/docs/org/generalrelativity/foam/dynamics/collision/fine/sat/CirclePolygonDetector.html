@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../../../print.css" type="text/css" media="print">
+<meta content="CirclePolygonDetector,org.generalrelativity.foam.dynamics.collision.fine.sat.CirclePolygonDetector,circle,body,minDistance,penetrationAxis,hasCollision,getContacts" name="keywords">
+<title>org.generalrelativity.foam.dynamics.collision.fine.sat.CirclePolygonDetector</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'CirclePolygonDetector - API Documentation';
+				var baseRef = '../../../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../../../all-classes.html')" href="../../../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../../../all-classes.html')" href="../../../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../../../index-list.html')" href="../../../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../../../index.html?org/generalrelativity/foam/dynamics/collision/fine/sat/CirclePolygonDetector.html&amp;org/generalrelativity/foam/dynamics/collision/fine/sat/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;CirclePolygonDetector</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class CirclePolygonDetector"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.generalrelativity.foam.dynamics.collision.fine.sat</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class CirclePolygonDetector</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../../IFineCollisionDetector.html">IFineCollisionDetector</a></td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#body">body</a> : <a href="../../../element/IBody.html">IBody</a>
+<div class="summaryTableDescription"> IBody to detect </div>
+</td><td class="summaryTableOwnerCol">CirclePolygonDetector</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#circle">circle</a> : <a href="../../../element/body/Circle.html">Circle</a>
+<div class="summaryTableDescription"> Circle to detect </div>
+</td><td class="summaryTableOwnerCol">CirclePolygonDetector</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#minDistance">minDistance</a> : Number<div class="summaryTableDescription"> minimum distance along the pentration axis required to resolve penetration </div>
+</td><td class="summaryTableOwnerCol">CirclePolygonDetector</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#penetrationAxis">penetrationAxis</a> : <a href="../../../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription"> most direct vector out of penetration </div>
+</td><td class="summaryTableOwnerCol">CirclePolygonDetector</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#CirclePolygonDetector()">CirclePolygonDetector</a>(circle:<a href="../../../element/body/Circle.html">Circle</a>, body:<a href="../../../element/IBody.html">IBody</a>)</div>
+<div class="summaryTableDescription">
+   Creates a new CirclePolygonDetector
+   
+   </div>
+</td><td class="summaryTableOwnerCol">CirclePolygonDetector</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getContacts()">getContacts</a>():Array</div>
+<div class="summaryTableDescription">
+   Gets point of contact in world-coordinates
+   
+   <p>
+   In the case of Circle vs.</div>
+</td><td class="summaryTableOwnerCol">CirclePolygonDetector</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hasCollision()">hasCollision</a>():Boolean</div>
+<div class="summaryTableDescription">
+   Determines whether the <code>#circle</code> and <code>#body</code> are intersecting.</div>
+</td><td class="summaryTableOwnerCol">CirclePolygonDetector</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="body"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">body</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var body:<a href="../../../element/IBody.html">IBody</a></code><p> IBody to detect </p></div>
+<a name="circle"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">circle</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var circle:<a href="../../../element/body/Circle.html">Circle</a></code><p> Circle to detect </p></div>
+<a name="minDistance"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">minDistance</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var minDistance:Number</code><p> minimum distance along the pentration axis required to resolve penetration </p></div>
+<a name="penetrationAxis"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">penetrationAxis</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var penetrationAxis:<a href="../../../../math/Vector.html">Vector</a></code><p> most direct vector out of penetration </p></div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="CirclePolygonDetector()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">CirclePolygonDetector</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function CirclePolygonDetector(circle:<a href="../../../element/body/Circle.html">Circle</a>, body:<a href="../../../element/IBody.html">IBody</a>)</code><p>
+   Creates a new CirclePolygonDetector
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">circle</span>:<a href="../../../element/body/Circle.html">Circle</a></code> &mdash; Circle to check for collision
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">body</span>:<a href="../../../element/IBody.html">IBody</a></code> &mdash; body to check for collision against
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="getContacts()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getContacts</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getContacts():Array</code><p>
+   Gets point of contact in world-coordinates
+   
+   </p><p>
+   In the case of Circle vs. anything, there will be at most 1 point of contact. That point
+   of contact will always be on the circle's edge and can be found by moving out from the
+   circle's position in the direction of the penetration axis by the length of the radius.
+   </p>
+   
+   <p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash; Array with single Contact
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">PolygonPolygonDetector.getContacts</div>
+</div>
+<a name="hasCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hasCollision():Boolean</code><p>
+   Determines whether the <code>#circle</code> and <code>#body</code> are intersecting.
+   
+   </p><p>
+   We check each axis as a contender for separation between the bodies. It's usually
+   quite more likely in an application that objects AREN'T intersecting. For that 
+   reason, this algorithm is constructed such that it terminates as soon as possible
+   given non-intersection. It's good to think of collision as absolute worst case
+   scenario- its detection and resolution are the most processor intensive aspects
+   of FOAM.
+   </p>
+   
+   <p>
+   With the case of a circle, we check each of the polygon's offered axes and then the
+   axis that's created between the closest vertex on the polygon and the Circle.
+   </p>
+   
+   <p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true given penetration, false otherwise
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="AxisProjection.html" target="">AxisProjection</a>
+<br>
+<a href="CircleAxisProjection.html" target="">CircleAxisProjection</a>
+<br>
+<a href="PolygonPolygonDetector.html" target="">(in depth commenting in-algorithm)</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->
