@@ -22,8 +22,10 @@ package example
 			//allow user to drag elements around
 			foam.useMouseDragger( true );
 			
+			foam.solverIterations = 2;
+			
 			//add a bunch of random polygons
-			for( var i:int = 0; i < 25; i++ )
+			for( var i:int = 0; i < 22; i++ )
 			{
 				
 				//set up random position/size/number of vertices
@@ -33,7 +35,7 @@ package example
 				var rNumVertices:Number = 2 + Math.floor( Math.random() * 5 );
 				
 				//create a new RigidBody
-				var body:RigidBody = new RigidBody( rx, ry, rSize, ShapeUtil.createSymmetricPolygon( rNumVertices, rSize ) );
+				var body:RigidBody = new RigidBody( rx, ry, rSize * 10, ShapeUtil.createSymmetricPolygon( rNumVertices, rSize ) );
 				//add the body to foam
 				foam.addElement( body );
 				

@@ -219,7 +219,8 @@ package org.generalrelativity.foam.dynamics
 		 * */
 		public function removeODESolver( solver:IODESolver ) : void
 		{
-			_odeSolvers.splice( _odeSolvers.indexOf( solver ), 1 );
+			var index:int = _odeSolvers.indexOf( solver );
+			if( index > -1 ) _odeSolvers.splice( _odeSolvers.indexOf( solver ), 1 );
 			_numODESolvers = _odeSolvers.length;
 		}
 		
@@ -262,7 +263,7 @@ package org.generalrelativity.foam.dynamics
 		 * */
 		public function set solverIterations( value:int ) : void
 		{
-			_solverIterations = value;
+			_solverIterations = Math.max( Math.abs( value ), 1 );
 		}
 		
 		/**
@@ -274,16 +275,19 @@ package org.generalrelativity.foam.dynamics
 		 * */
 		public function getBodyUnderPoint( point:Vector ) : IBody
 		{
+			
 			var pointPolygonDetector:PointPolygonDetector;
-			for each( var collidable:ISimulatable in _coarseDetector.getDynamicCollidables() )
+			for each( var solver:IODESolver in _odeSolvers )
 			{
-				if( collidable is IBody )
+				if( solver.ode is IBody )
 				{
-					pointPolygonDetector = new PointPolygonDetector( IBody( collidable ), point );
-					if( pointPolygonDetector.hasCollision() ) return IBody( collidable );
+					pointPolygonDetector = new PointPolygonDetector( IBody( solver.ode ), point );
+					if( pointPolygonDetector.hasCollision() ) return IBody( solver.ode );
 				}
 			}
+			
 			return null;
+			
 		}
 		
 	}

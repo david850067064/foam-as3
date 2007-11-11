@@ -28,12 +28,14 @@ package example
 			//allow the user to drag
 			foam.useMouseDragger( true );
 			
+			foam.solverIterations = 2;
+			
 			//add friction and gravity as global forces
-			foam.addGlobalForceGenerator( new Gravity( new Vector( 0, 1.5 ) ) );
-			foam.addGlobalForceGenerator( new Friction( 0.05 ) );
+			foam.addGlobalForceGenerator( new Gravity( new Vector( 0, 1.3 ) ) );
+			foam.addGlobalForceGenerator( new Friction( 0.01 ) );
 			
 			//add a bunch of random polygons
-			for( var i:int = 0; i < 15; i++ )
+			for( var i:int = 0; i < 11; i++ )
 			{
 				
 				//set up random position/size/number of vertices
@@ -58,7 +60,7 @@ package example
 			foam.addElement( new RigidBody( 800, 300, Simplification.INFINITE_MASS, ShapeUtil.createRectangle( 20, 600 ) ) ); //right
 			
 			//build the ramp
-			foam.addElement( new RigidBody( 250, 400, Simplification.INFINITE_MASS, ShapeUtil.createRectangle( 500, 30 ), 0, 0, 0.2, 0.25, 0.6 ) );
+			foam.addElement( new RigidBody( 250, 400, Simplification.INFINITE_MASS, ShapeUtil.createRectangle( 500, 30 ), 0, 0, 0.2, 0.25, 0.4 ) );
 			
 			//create 2 immovable anchors to hold up the swing
 			var anchor1:RigidBody = new RigidBody( 400, 50, Simplification.INFINITE_MASS, ShapeUtil.createSymmetricPolygon( 3, 30 ) );
@@ -97,6 +99,7 @@ package example
 				//place it back up top if it's fallen too far
 				if( simulatable.y > PerpetualFall.FALL_LIMIT )
 				{
+					simulatable.vy = 0;
 					simulatable.x = 50 + Math.random() * 700;
 					simulatable.y = -200;
 				}

@@ -66,8 +66,11 @@ package org.generalrelativity.foam.util
 		public function remove( key:* ) : void
 		{
 			var index:int = getKeyIndex( key );
-			_keys.splice( index, 1 );
-			_values.splice( index, 1 );
+			if( index > -1 )
+			{
+				_keys.splice( index, 1 );
+				_values.splice( index, 1 );
+			}
 		}
 		
 		public function getKeyIndex( key:* ) : int

@@ -72,16 +72,18 @@ package org.generalrelativity.foam.view
 		
 		public function addRenderable( renderable:Renderable ) : void
 		{
-			if( !renderable.data.color ) renderable.data.color = SimpleFoamRenderer.DEFAULT_COLOR;
-			if( !renderable.data.alpha ) renderable.data.alpha = 0.5;
+			setupRenderDataDefaults( renderable );
 			if( renderable.isDynamic ) _dynamicRenderables.push( renderable );
 			else _staticRenderables.push( renderable );
 		}
 		
 		public function removeRenderable( renderable:Renderable ) : void
 		{
-			if( !renderable.isDynamic ) _staticRenderables.splice( _staticRenderables.indexOf( renderable ), 1 );
-			else _dynamicRenderables.splice( _dynamicRenderables.indexOf( renderable ), 1 );
+			var array:Array;
+			if( renderable.isDynamic ) array = _dynamicRenderables;
+			else array = _staticRenderables;
+			var index:int = array.indexOf( renderable );
+			if( index > -1 ) array.splice( index, 1 );
 		}
 		
 		public function getDisplayObject( renderable:Renderable ) : DisplayObject
@@ -113,7 +115,7 @@ package org.generalrelativity.foam.view
 			{
 				
 				case Circle :
-				drawCircle( Circle( renderable.element ), renderable.data.color, renderable.data.alpha );
+				drawCircle( Circle( renderable.element ), renderable.data.color, renderable.data.alpha, renderable.data.hashSize );
 				break;
 				
 				case RigidBody :
@@ -153,14 +155,14 @@ package org.generalrelativity.foam.view
 			}
 		}
 		
-		protected function drawCircle( circle:Circle, color:uint, alpha:Number ) : void
+		protected function drawCircle( circle:Circle, color:uint, alpha:Number, hashSize:int ) : void
 		{
 			currentCanvas.graphics.lineStyle( 1, 0x333333 );
 			currentCanvas.graphics.beginFill( color, alpha );
 			currentCanvas.graphics.drawCircle( circle.x, circle.y, circle.radius );
 			currentCanvas.graphics.endFill();
 			currentCanvas.graphics.beginFill( 0xffffff );
-			RenderingUtil.drawHash( currentCanvas.graphics, circle.x, circle.y, circle.rotation, 10 );
+			RenderingUtil.drawHash( currentCanvas.graphics, circle.x, circle.y, circle.rotation, hashSize );
 			currentCanvas.graphics.endFill();
 		}
 		
@@ -206,6 +208,13 @@ package org.generalrelativity.foam.view
 			var p2:Vector = spring.getPoint2InWorldSpace();
 			currentCanvas.graphics.moveTo( p1.x, p1.y );
 			currentCanvas.graphics.lineTo( p2.x, p2.y );
+		}
+		
+		protected function setupRenderDataDefaults( renderable:Renderable ) : void
+		{
+			if( renderable.data.color == null ) renderable.data.color = SimpleFoamRenderer.DEFAULT_COLOR;
+			if( !renderable.data.alpha ) renderable.data.alpha = 0.5;
+			if( !renderable.data.hashSize ) renderable.data.hashSize = 10;
 		}
 		
 		public function get renderables() : Array

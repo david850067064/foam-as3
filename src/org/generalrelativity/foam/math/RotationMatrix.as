@@ -23,6 +23,9 @@ THE SOFTWARE.
 /**
  * Rotation Matrix
  * 
+ * | r11 r12 |
+ * | r21 r22 |
+ * 
  * @author Drew Cummins
  * @since 10.31.07
  * */
