@@ -211,7 +211,8 @@ package org.generalrelativity.foam.dynamics.element.particle
 		 * */
 		public function removeForceGenerator( generator:IForceGenerator ) : void
 		{
-			_generators.splice( _generators.indexOf( generator ), 1 );
+			var index:int = _generators.indexOf( generator );
+			if( index > -1 ) _generators.splice( _generators.indexOf( generator ), 1 );
 		}
 		
 		/**

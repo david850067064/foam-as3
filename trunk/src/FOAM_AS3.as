@@ -7,6 +7,8 @@ package
 	import example.ZeroGravityToyChest;
 	import example.PerpetualFall;
 	import example.orbit.SimpleOrbit;
+	import example.PerpetualFall;
+	import example.orbit.SimpleOrbit;
 
 	[SWF( backgroundColor="#ececed", width="800", height="600" )] 
 	public class FOAM_AS3 extends Sprite

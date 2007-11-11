@@ -202,8 +202,13 @@ package org.generalrelativity.foam.dynamics.collision.coarse
 		 * */
 		public function removeCollidable( collidable:ISimulatable ) : void
 		{
-			_dynamicCollidables.splice( _dynamicCollidables.indexOf( collidable ), 1 );
-			_staticCollidables.splice( _staticCollidables.indexOf( collidable ), 1 );
+			var index:int = _dynamicCollidables.indexOf( collidable );
+			if( index > -1 ) _dynamicCollidables.splice( _dynamicCollidables.indexOf( collidable ), 1 );
+			else
+			{
+				index = _staticCollidables.indexOf( collidable );
+				if( index > -1 ) _staticCollidables.splice( _staticCollidables.indexOf( collidable ), 1 );
+			}
 			_dynamicLength = _dynamicCollidables.length;
 			_collidablesLength = _dynamicLength + _staticCollidables.length;
 		}

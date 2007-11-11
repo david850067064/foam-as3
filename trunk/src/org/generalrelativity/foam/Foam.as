@@ -227,15 +227,19 @@ package org.generalrelativity.foam
 		public function removeGlobalForceGenerator( forceGenerator:IForceGenerator, remainInEffect:Boolean = false ) : void
 		{
 			
-			if( !remainInEffect )
+			var index:int = _globalForceGenerators.indexOf( forceGenerator );
+			if( index > -1 )
 			{
-				for each( var simulatable:ISimulatable in _solverMap.keys )
+				if( !remainInEffect )
 				{
-					simulatable.removeForceGenerator( forceGenerator );
+					for each( var simulatable:ISimulatable in _solverMap.keys )
+					{
+						simulatable.removeForceGenerator( forceGenerator );
+					}
 				}
+				_globalForceGenerators.splice( _globalForceGenerators.indexOf( forceGenerator ), 1 );
 			}
-				
-			_globalForceGenerators.splice( _globalForceGenerators.indexOf( forceGenerator ), 1 );
+			
 			
 		}
 		
@@ -384,11 +388,6 @@ package org.generalrelativity.foam
 		public function setCollisionFactory( factory:ICollisionFactory ) : void
 		{
 			_engine.setCollisionFactory( factory );
-		}
-		
-		public function setEngineSolverIterations( solverIterations:Number ) : void
-		{
-			_engine.solverIterations = solverIterations;
 		}
 		
 		public function get engine() : PhysicsEngine
