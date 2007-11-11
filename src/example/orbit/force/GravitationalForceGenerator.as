@@ -2,7 +2,6 @@ package example.orbit.force
 {
 	
 	import org.generalrelativity.foam.dynamics.element.ISimulatable;
-	import org.generalrelativity.foam.util.MathUtil;
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.dynamics.force.IForceGenerator;
 	import org.generalrelativity.foam.dynamics.enum.Simplification;

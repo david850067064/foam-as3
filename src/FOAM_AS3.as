@@ -4,10 +4,6 @@ package
 	import flash.display.Sprite;
 	import flash.display.StageScaleMode;
 	import flash.display.StageAlign;
-	import example.ZeroGravityToyChest;
-	import example.PerpetualFall;
-	import example.orbit.SimpleOrbit;
-	import example.PerpetualFall;
 	import example.orbit.SimpleOrbit;
 
 	[SWF( backgroundColor="#ececed", width="800", height="600" )] 
