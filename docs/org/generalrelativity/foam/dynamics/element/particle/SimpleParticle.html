@@ -1,0 +1,711 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../../print.css" type="text/css" media="print">
+<meta content="SimpleParticle,org.generalrelativity.foam.dynamics.element.particle.SimpleParticle,_mass,_inverseMass,_force,_state,_generators,_elasticity,_friction,state,force,collisionTypeID,x,y,vx,vy,inverseMass,mass,position,velocity,friction,elasticity,getDerivative,addForce,clearForces,addForceGenerator,removeForceGenerator,accumulateForces" name="keywords">
+<title>org.generalrelativity.foam.dynamics.element.particle.SimpleParticle</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'SimpleParticle - API Documentation';
+				var baseRef = '../../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../../all-classes.html')" href="../../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../../all-classes.html')" href="../../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../../index-list.html')" href="../../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../../index.html?org/generalrelativity/foam/dynamics/element/particle/SimpleParticle.html&amp;org/generalrelativity/foam/dynamics/element/particle/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;SimpleParticle</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class SimpleParticle"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.generalrelativity.foam.dynamics.element.particle</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class SimpleParticle</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../../ode/IODE.html">IODE</a>, <a href="../ISimulatable.html">ISimulatable</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../body/RigidBody.html">RigidBody</a></td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#collisionTypeID">collisionTypeID</a> : String<div class="summaryTableDescription">[read-only]</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#elasticity">elasticity</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#force">force</a> : <a href="../../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription">[read-only]</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#friction">friction</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#inverseMass">inverseMass</a> : Number<div class="summaryTableDescription">[read-only]</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mass">mass</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#position">position</a> : <a href="../../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription">[read-only]</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#state">state</a> : Array<div class="summaryTableDescription">[read-only]
+   Gets the state of the differential equation
+   
+   <p>
+   Consider a particle with position x and velocity v.</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#velocity">velocity</a> : <a href="../../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription">[read-only]</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#vx">vx</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#vy">vy</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#x">x</a> : Number<div class="summaryTableDescription">
+   Note that these values that constitute this IODE's state use getters/setters
+   that access specific indices within _state.</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#y">y</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_elasticity">_elasticity</a> : Number<div class="summaryTableDescription"> elastic coefficient of particle (used in collision response) </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_force">_force</a> : <a href="../../../math/Vector.html">Vector</a>
+<div class="summaryTableDescription"> holds all accummulate forces </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_friction">_friction</a> : Number<div class="summaryTableDescription"> frictional coefficient (used in collision response) </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_generators">_generators</a> : Array<div class="summaryTableDescription"> holds all IForceGenerators affecting this particle </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_inverseMass">_inverseMass</a> : Number<div class="summaryTableDescription"> holds the inverse mass- this is an optimization as multiplication is faster than division and we can calculate this offline </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_mass">_mass</a> : Number<div class="summaryTableDescription"> holds the mass of the particle </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_state">_state</a> : Array<div class="summaryTableDescription"> holds the state of the system </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#SimpleParticle()">SimpleParticle</a>(x:Number, y:Number, vx:Number = 0, vy:Number = 0, mass:Number = 100, friction:Number = 0.2, elasticity:Number = 0.25, stateLength:uint = 4)</div>
+<div class="summaryTableDescription">
+   Creates a new SimpleParticle
+   
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#accumulateForces()">accumulateForces</a>():void</div>
+<div class="summaryTableDescription">
+   Accumulates forces
+   
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addForce()">addForce</a>(force:<a href="../../../math/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">
+   Adds a force to the particle
+   
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addForceGenerator()">addForceGenerator</a>(generator:<a href="../../force/IForceGenerator.html">IForceGenerator</a>):void</div>
+<div class="summaryTableDescription">
+   Adds a force generator to influence this particle
+   
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clearForces()">clearForces</a>():void</div>
+<div class="summaryTableDescription">
+   Clears all forces
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getDerivative()">getDerivative</a>(state:Array, derivative:Array):void</div>
+<div class="summaryTableDescription">
+   Gets the element's derivative
+   
+   <p>
+   This is called by this equation's IODESolver.</div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeForceGenerator()">removeForceGenerator</a>(generator:<a href="../../force/IForceGenerator.html">IForceGenerator</a>):void</div>
+<div class="summaryTableDescription">
+   Removes a force generator
+   
+   </div>
+</td><td class="summaryTableOwnerCol">SimpleParticle</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="collisionTypeID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">collisionTypeID</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>collisionTypeID:String</code>&nbsp;&nbsp;[read-only]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get collisionTypeID():String</code>
+<br>
+</div>
+<a name="_elasticity"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_elasticity</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _elasticity:Number</code><p> elastic coefficient of particle (used in collision response) </p></div>
+<a name="elasticity"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">elasticity</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>elasticity:Number</code>&nbsp;&nbsp;[read-write]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get elasticity():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set elasticity(value:Number):void</code>
+<br>
+</div>
+<a name="_force"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_force</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _force:<a href="../../../math/Vector.html">Vector</a></code><p> holds all accummulate forces </p></div>
+<a name="force"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">force</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>force:<a href="../../../math/Vector.html">Vector</a></code>&nbsp;&nbsp;[read-only]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get force():<a href="../../../math/Vector.html">Vector</a></code>
+<br>
+</div>
+<a name="_friction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_friction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _friction:Number</code><p> frictional coefficient (used in collision response) </p></div>
+<a name="friction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">friction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>friction:Number</code>&nbsp;&nbsp;[read-write]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get friction():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set friction(value:Number):void</code>
+<br>
+</div>
+<a name="_generators"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_generators</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _generators:Array</code><p> holds all IForceGenerators affecting this particle </p></div>
+<a name="_inverseMass"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_inverseMass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _inverseMass:Number</code><p> holds the inverse mass- this is an optimization as multiplication is faster than division and we can calculate this offline </p></div>
+<a name="inverseMass"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">inverseMass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>inverseMass:Number</code>&nbsp;&nbsp;[read-only]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get inverseMass():Number</code>
+<br>
+</div>
+<a name="_mass"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_mass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _mass:Number</code><p> holds the mass of the particle </p></div>
+<a name="mass"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mass:Number</code>&nbsp;&nbsp;[read-write]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mass():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set mass(value:Number):void</code>
+<br>
+</div>
+<a name="position"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">position</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>position:<a href="../../../math/Vector.html">Vector</a></code>&nbsp;&nbsp;[read-only]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get position():<a href="../../../math/Vector.html">Vector</a></code>
+<br>
+</div>
+<a name="_state"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_state</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _state:Array</code><p> holds the state of the system </p></div>
+<a name="state"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">state</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>state:Array</code>&nbsp;&nbsp;[read-only]<p>
+   Gets the state of the differential equation
+   
+   </p><p>
+   Consider a particle with position x and velocity v. We want to
+   integrate this state with respect to time. The position and 
+   velocity are pushed into the particle's state Array and solved
+   by an IODESolver. By abstracting the process this far, we make
+   it easy to swap solvers for different tasks.
+   </p>
+   
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get state():Array</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../particle/SimpleParticle.html#getDerivative" target="">getDerivative</a>
+<br>IODESolver</div>
+</div>
+<a name="velocity"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">velocity</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>velocity:<a href="../../../math/Vector.html">Vector</a></code>&nbsp;&nbsp;[read-only]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get velocity():<a href="../../../math/Vector.html">Vector</a></code>
+<br>
+</div>
+<a name="vx"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">vx</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>vx:Number</code>&nbsp;&nbsp;[read-write]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get vx():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set vx(value:Number):void</code>
+<br>
+</div>
+<a name="vy"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">vy</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>vy:Number</code>&nbsp;&nbsp;[read-write]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get vy():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set vy(value:Number):void</code>
+<br>
+</div>
+<a name="x"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">x</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>x:Number</code>&nbsp;&nbsp;[read-write]<p>
+   Note that these values that constitute this IODE's state use getters/setters
+   that access specific indices within _state. Everything is modified through this
+   state Array
+   
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get x():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set x(value:Number):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">IODE<br>ISimulatable</div>
+</div>
+<a name="y"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>y:Number</code>&nbsp;&nbsp;[read-write]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get y():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set y(value:Number):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="SimpleParticle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SimpleParticle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function SimpleParticle(x:Number, y:Number, vx:Number = 0, vy:Number = 0, mass:Number = 100, friction:Number = 0.2, elasticity:Number = 0.25, stateLength:uint = 4)</code><p>
+   Creates a new SimpleParticle
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; horizontal position of particle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code> &mdash; vertical position of particle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">vx</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; horizontal starting velocity of particle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">vy</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; vertical starting velocity of particle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mass</span>:Number</code> (default = <code>100</code>)<code></code> &mdash; mass of element
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">friction</span>:Number</code> (default = <code>0.2</code>)<code></code> &mdash; frictional coefficient (0 - 1.0)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">elasticity</span>:Number</code> (default = <code>0.25</code>)<code></code> &mdash; elastic coefficient (0 - 1.0)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stateLength</span>:uint</code> (default = <code>4</code>)<code></code> &mdash; defines the length of this IODE's state
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="accumulateForces()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">accumulateForces</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function accumulateForces():void</code><p>
+   Accumulates forces
+   
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">IForceGenerator.generate</div>
+</div>
+<a name="addForce()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addForce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addForce(force:<a href="../../../math/Vector.html">Vector</a>):void</code><p>
+   Adds a force to the particle
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">force</span>:<a href="../../../math/Vector.html">Vector</a></code> &mdash; force to add
+   </td>
+</tr>
+</table>
+</div>
+<a name="addForceGenerator()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addForceGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addForceGenerator(generator:<a href="../../force/IForceGenerator.html">IForceGenerator</a>):void</code><p>
+   Adds a force generator to influence this particle
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">generator</span>:<a href="../../force/IForceGenerator.html">IForceGenerator</a></code> &mdash; IForceGenerator to add
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">IForceGenerator<br>
+<a href="../particle/SimpleParticle.html#removeForceGenerator" target="">removeForceGenerator</a>
+</div>
+</div>
+<a name="clearForces()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clearForces</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clearForces():void</code><p>
+   Clears all forces
+   </p></div>
+<a name="getDerivative()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getDerivative</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDerivative(state:Array, derivative:Array):void</code><p>
+   Gets the element's derivative
+   
+   </p><p>
+   This is called by this equation's IODESolver. First, the state is updated. Then,
+   all forces are accumulated based on this state (this is important- without this,
+   higher-order differential equation solvers have no worth). Next, the derivative
+   is populated. Finally all forces are cleared.
+   </p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">state</span>:Array</code> &mdash; state needed to define derivative
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">derivative</span>:Array</code> &mdash; derivative at given state
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../particle/SimpleParticle.html#state" target="">state</a>
+<br>IODESolver.step</div>
+</div>
+<a name="removeForceGenerator()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeForceGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeForceGenerator(generator:<a href="../../force/IForceGenerator.html">IForceGenerator</a>):void</code><p>
+   Removes a force generator
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">generator</span>:<a href="../../force/IForceGenerator.html">IForceGenerator</a></code> &mdash; IForceGenerator to remove
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">IForceGenerator<br>
+<a href="../particle/SimpleParticle.html#addForceGenerator" target="">addForceGenerator</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->
