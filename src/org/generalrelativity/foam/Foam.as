@@ -86,6 +86,9 @@ package org.generalrelativity.foam
 		/** defines the amount of time simulated each frame **/
 		private var _timestep:Number;
 		
+		
+		private var _velocityMap:SimpleMap;
+		
 		/**
 		 * Creates a new FOAM interface
 		 * 
@@ -95,6 +98,7 @@ package org.generalrelativity.foam
 		{
 			_solverMap = new SimpleMap();
 			_renderMap = new SimpleMap();
+			_velocityMap = new SimpleMap();
 			_engine = new PhysicsEngine();
 			_globalForceGenerators = new Array();
 			_callOnAddedToStage = new Array();
@@ -150,6 +154,7 @@ package org.generalrelativity.foam
 				
 				//map this element to the solver
 				_solverMap.put( element, solver );
+				_velocityMap.put( element, element.velocity );
 				//add the IODESolver to the engine for advancement
 				_engine.addODESolver( solver );
 				
@@ -408,6 +413,7 @@ package org.generalrelativity.foam
 				removeChild( DisplayObject( _renderer ) );
 			}
 			_renderer = renderer;
+			if( _isSimulating ) _renderer.draw();
 			addChild( DisplayObject( _renderer ) );
 		}
 		

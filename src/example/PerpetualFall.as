@@ -13,6 +13,7 @@ package example
 	import org.generalrelativity.foam.dynamics.force.spring.RigidBodyBungee;
 	import org.generalrelativity.foam.view.Renderable;
 	import org.generalrelativity.foam.dynamics.element.body.Circle;
+	import example.rocket.view.BitmapRenderer;
 
 	public class PerpetualFall extends Sprite
 	{
@@ -28,7 +29,7 @@ package example
 			//allow the user to drag
 			foam.useMouseDragger( true );
 			
-			foam.solverIterations = 2;
+			foam.solverIterations = 4;
 			
 			//add friction and gravity as global forces
 			foam.addGlobalForceGenerator( new Gravity( new Vector( 0, 1.3 ) ) );
@@ -85,6 +86,8 @@ package example
 			
 			//listen for FOAM's step
 			foam.addEventListener( Foam.STEP, onFoamStep, false, 0, true );
+			
+			foam.setRenderer( new BitmapRenderer() );
 			
 			//start the simulation
 			foam.simulate();

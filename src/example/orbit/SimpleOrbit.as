@@ -53,7 +53,7 @@ package example.orbit
 			setupLabels();
 			
 			//uncomment to watch Euler spiral out of control even faster
-			//foam.solverIterations = 1;
+			foam.solverIterations = 121;
 			
 			//start the simulation
 			foam.simulate();
@@ -71,8 +71,8 @@ package example.orbit
 		private function addLabel( text:String, color:uint, yPos:int ) : void
 		{
 			var textField:TextField = new TextField();
-			textField.autoSize = TextFieldAutoSize.LEFT;
-			textField.x = 200;
+			textField.autoSize = TextFieldAutoSize.CENTER;
+			textField.x = 400;
 			textField.y = yPos;
 			textField.textColor = color;
 			textField.text = text;
