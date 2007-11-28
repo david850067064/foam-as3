@@ -138,9 +138,20 @@ package org.generalrelativity.foam.dynamics.collision
 				//dot this onto the contact normal
 				var rvNorm:Number = relativeVelocity.dot( contact.normal );
 				
-				//find the coefficient of restitution for this collision based upon each
-				//body's elasticity property
-				var restitution:Number = ( body1.elasticity + body2.elasticity ) * 0.5;
+				var restitution:Number;
+				
+				if( rvNorm > -3 )
+				{
+					restitution = 0;
+					if( rvNorm > -0.01 ) return;
+				} 
+				else
+				{
+				
+					//find the coefficient of restitution for this collision based upon each
+					//body's elasticity property
+					restitution = ( body1.elasticity + body2.elasticity ) * 0.5;
+				}
 				
 				//solve for the impulse to apply to each body
 				var impulse:Number = -( 1 + restitution ) * rvNorm / impulseDenominator;
