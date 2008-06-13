@@ -46,14 +46,11 @@ THE SOFTWARE.
 package org.generalrelativity.foam.dynamics.force.spring
 {
 	
-	import org.generalrelativity.foam.dynamics.force.SimpleForceGenerator;
+	import org.generalrelativity.foam.dynamics.element.ISimulatable;
 	import org.generalrelativity.foam.dynamics.force.IForceGenerator;
-	import org.generalrelativity.foam.dynamics.element.ISimulatable;
-	import org.generalrelativity.foam.dynamics.element.ISimulatable;
-	import org.generalrelativity.foam.util.MathUtil;
+	import org.generalrelativity.foam.dynamics.force.SimpleForceGenerator;
 	import org.generalrelativity.foam.math.Vector;
-	import org.generalrelativity.foam.dynamics.element.IBody;
-	import org.generalrelativity.foam.math.RotationMatrix;
+	import org.generalrelativity.foam.util.MathUtil;
 
 	public class Spring extends SimpleForceGenerator implements IForceGenerator
 	{
@@ -76,6 +73,8 @@ package org.generalrelativity.foam.dynamics.force.spring
 		 * @param element2 element to connect other end of spring to
 		 * @param k spring constant
 		 * @param damp damping coefficient
+		 * @param restLength An optional rest length of the spring. Default is distance between 
+		 * 					 the two elements.
 		 * */
 		public function Spring( element1:ISimulatable, element2:ISimulatable, k:Number = 0.01, damp:Number = 0.4 )
 		{
@@ -87,6 +86,9 @@ package org.generalrelativity.foam.dynamics.force.spring
 			restLength = MathUtil.distance( element1.x, element2.x, element1.y, element2.y );
 		}
 		
+		public function get restLength():Number  {
+			return _restLength;
+		}
 		public function set restLength( value:Number ) : void
 		{
 			_restLength = value;
@@ -100,6 +102,10 @@ package org.generalrelativity.foam.dynamics.force.spring
 			element1.addForce( _force );
 		}
 		
+		public function destroy():void {
+			element1.removeForceGenerator(this);
+		}
+		
 		/**
 		 * Clone's a Spring for use with another element
 		 * 
@@ -110,7 +116,7 @@ package org.generalrelativity.foam.dynamics.force.spring
 		 * */
 		public function clone( invert:Boolean = true ) : Spring
 		{
-			if( invert ) return new Spring( element2, element1, k, damp );
+			if( invert ) return new Spring( element2, element1, k, damp);
 			return new Spring( element1, element2, k, damp );
 		}
 		
