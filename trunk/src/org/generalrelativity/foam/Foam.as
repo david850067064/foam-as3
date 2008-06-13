@@ -32,27 +32,27 @@ THE SOFTWARE.
  * */
 package org.generalrelativity.foam
 {
+	import flash.display.DisplayObject;
 	import flash.display.Sprite;
-	import org.generalrelativity.foam.dynamics.ode.solver.RK4;
-	import flash.utils.Dictionary;
-	import org.generalrelativity.foam.dynamics.element.ISimulatable;
-	import org.generalrelativity.foam.dynamics.ode.IODESolver;
-	import org.generalrelativity.foam.dynamics.enum.Simplification;
-	import org.generalrelativity.foam.dynamics.ode.IODE;
-	import org.generalrelativity.foam.dynamics.PhysicsEngine;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
+	
+	import org.generalrelativity.foam.dynamics.PhysicsEngine;
+	import org.generalrelativity.foam.dynamics.collision.ICoarseCollisionDetector;
+	import org.generalrelativity.foam.dynamics.collision.ICollisionFactory;
+	import org.generalrelativity.foam.dynamics.element.IBody;
+	import org.generalrelativity.foam.dynamics.element.ISimulatable;
+	import org.generalrelativity.foam.dynamics.enum.Simplification;
+	import org.generalrelativity.foam.dynamics.force.IForceGenerator;
+	import org.generalrelativity.foam.dynamics.force.spring.MouseSpring;
+	import org.generalrelativity.foam.dynamics.ode.IODE;
+	import org.generalrelativity.foam.dynamics.ode.IODESolver;
+	import org.generalrelativity.foam.dynamics.ode.solver.RK4;
+	import org.generalrelativity.foam.math.Vector;
+	import org.generalrelativity.foam.util.SimpleMap;
 	import org.generalrelativity.foam.view.IFoamRenderer;
 	import org.generalrelativity.foam.view.Renderable;
 	import org.generalrelativity.foam.view.SimpleFoamRenderer;
-	import flash.display.DisplayObject;
-	import flash.events.MouseEvent;
-	import org.generalrelativity.foam.dynamics.force.spring.MouseSpring;
-	import org.generalrelativity.foam.math.Vector;
-	import org.generalrelativity.foam.dynamics.element.IBody;
-	import org.generalrelativity.foam.dynamics.collision.ICollisionFactory;
-	import org.generalrelativity.foam.dynamics.collision.ICoarseCollisionDetector;
-	import org.generalrelativity.foam.dynamics.force.IForceGenerator;
-	import org.generalrelativity.foam.util.SimpleMap;
 
 	[Event(name="step", type="flash.events.Event")]
 	public class Foam extends Sprite
@@ -444,6 +444,11 @@ package org.generalrelativity.foam
 		{
 			_renderMap.put( renderable.element, renderable );
 			_renderer.addRenderable( renderable );
+		}
+		
+		public function removeRenderable (renderable:Renderable):void {
+			_renderMap.remove(renderable);
+			_renderer.removeRenderable(renderable);
 		}
 		
 		private function onAddedToStage( event:Event ) : void
