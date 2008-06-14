@@ -28,6 +28,8 @@ THE SOFTWARE.
  * */
 package org.generalrelativity.foam.math
 {
+	import flash.geom.Point;
+	
 	
 	
 
@@ -227,6 +229,15 @@ package org.generalrelativity.foam.math
 			return new Vector( x, y );
 		}
 		
+		/**
+		 * Returns a Point object with the same components as the Vector.
+		 * @see flash.geom.Point
+		 *
+		 * @returns a new Point object.
+		 */
+		public function asPoint():Point {
+			return new Point(x, y);
+		}
 		
 		
 		public function negate() : void
