@@ -214,7 +214,9 @@ package org.generalrelativity.foam.math
 			return x * v.y - y * v.x;
 		}
 		
-		
+		/**
+		 * @return a new Vector that is perpindicular to this.
+		 */
 		public function getPerp() : Vector
 		{
 			return new Vector( -y, x );
@@ -223,7 +225,9 @@ package org.generalrelativity.foam.math
 		
 		/**
 		 * Returns a Vector identical to the instance
-		 * */
+		 * 
+		 * @return a new Vector object
+		 */
 		public function clone() : Vector
 		{
 			return new Vector( x, y );
@@ -239,7 +243,9 @@ package org.generalrelativity.foam.math
 			return new Point(x, y);
 		}
 		
-		
+		/**
+		 * Reverses this vector. Equivelant to rotating it 180°
+		 */
 		public function negate() : void
 		{
 			x *= -1;
