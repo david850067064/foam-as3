@@ -49,14 +49,14 @@ package org.generalrelativity.foam.view
 		 * 
 		 * @param renderable element to add
 		 * */
-		function addRenderable( renderable:Renderable ) : void;
+		function addRenderable( renderable:IRenderable ) : void;
 		
 		/**
 		 * Removes a renderable element from the renderer
 		 * 
 		 * @param renderable element to remove
 		 * */
-		function removeRenderable( renderable:Renderable ) : void;
+		function removeRenderable( renderable:IRenderable ) : void;
 		
 		/**
 		 * Gets the DisplayObject that this element is "drawn" in
@@ -65,7 +65,7 @@ package org.generalrelativity.foam.view
 		 * 
 		 * @return DisplayObject that renderable is "drawn" in
 		 * */
-		function getDisplayObject( renderable:Renderable ) : DisplayObject;
+		function getDisplayObject( renderable:IRenderable ) : DisplayObject;
 		
 		/**
 		 * Draws everything the renderer should draw (generally called offline)

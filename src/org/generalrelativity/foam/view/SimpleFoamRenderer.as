@@ -70,14 +70,14 @@ package org.generalrelativity.foam.view
 			_dynamicRenderables = new Array();
 		}
 		
-		public function addRenderable( renderable:Renderable ) : void
+		public function addRenderable( renderable:IRenderable ) : void
 		{
 			setupRenderDataDefaults( renderable );
 			if( renderable.isDynamic ) _dynamicRenderables.push( renderable );
 			else _staticRenderables.push( renderable );
 		}
 		
-		public function removeRenderable( renderable:Renderable ) : void
+		public function removeRenderable( renderable:IRenderable ) : void
 		{
 			var array:Array;
 			if( renderable.isDynamic ) array = _dynamicRenderables;
@@ -86,7 +86,7 @@ package org.generalrelativity.foam.view
 			if( index > -1 ) array.splice( index, 1 );
 		}
 		
-		public function getDisplayObject( renderable:Renderable ) : DisplayObject
+		public function getDisplayObject( renderable:IRenderable ) : DisplayObject
 		{
 			if( _staticRenderables.indexOf( renderable ) != -1 ) return staticCanvas;
 			if( _dynamicRenderables.indexOf( renderable ) != -1 ) return dynamicCanvas;
@@ -109,7 +109,7 @@ package org.generalrelativity.foam.view
 			redraw();
 		}
 		
-		protected function proxy( renderable:Renderable, index:int, array:Array ) : void
+		protected function proxy( renderable:IRenderable, index:int, array:Array ) : void
 		{
 			switch( renderable.renderMethodKey )
 			{
@@ -210,7 +210,7 @@ package org.generalrelativity.foam.view
 			currentCanvas.graphics.lineTo( p2.x, p2.y );
 		}
 		
-		protected function setupRenderDataDefaults( renderable:Renderable ) : void
+		protected function setupRenderDataDefaults( renderable:IRenderable ) : void
 		{
 			if( renderable.data.color == null ) renderable.data.color = SimpleFoamRenderer.DEFAULT_COLOR;
 			if( !renderable.data.alpha ) renderable.data.alpha = 0.5;
@@ -225,7 +225,7 @@ package org.generalrelativity.foam.view
 		public function copy( renderer:IFoamRenderer ) : void
 		{
 			var copies:Array = renderables;
-			for each( var renderable:Renderable in copies )
+			for each( var renderable:IRenderable in copies )
 			{
 				renderer.addRenderable( renderable );
 			}
