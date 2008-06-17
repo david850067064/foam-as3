@@ -50,9 +50,7 @@ package org.generalrelativity.foam
 	import org.generalrelativity.foam.dynamics.ode.solver.RK4;
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.util.SimpleMap;
-	import org.generalrelativity.foam.view.IFoamRenderer;
-	import org.generalrelativity.foam.view.Renderable;
-	import org.generalrelativity.foam.view.SimpleFoamRenderer;
+	import org.generalrelativity.foam.view.*;
 
 	[Event(name="step", type="flash.events.Event")]
 	public class Foam extends Sprite
@@ -437,16 +435,16 @@ package org.generalrelativity.foam
 		 * 
 		 * @param renderable Renderable to add
 		 * 
-		 * @see Renderable
-		 * @see IFoamRenderer
+		 * @see org.generalrelativity.foam.view.IRenderable
+		 * @see org.generalrelativity.foam.view.IFoamRenderer
 		 * */
-		public function addRenderable( renderable:Renderable ) : void
+		public function addRenderable( renderable:IRenderable ) : void
 		{
 			_renderMap.put( renderable.element, renderable );
 			_renderer.addRenderable( renderable );
 		}
 		
-		public function removeRenderable (renderable:Renderable):void {
+		public function removeRenderable (renderable:IRenderable):void {
 			_renderMap.remove(renderable);
 			_renderer.removeRenderable(renderable);
 		}

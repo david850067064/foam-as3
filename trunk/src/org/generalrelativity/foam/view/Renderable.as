@@ -35,28 +35,39 @@ package org.generalrelativity.foam.view
 	import flash.utils.getDefinitionByName;
 	import flash.utils.getQualifiedClassName;
 	
-	public class Renderable
+	public class Renderable implements IRenderable
 	{
+		protected var _element:*;
+		protected var _isDynamic:Boolean;
+		protected var _renderMethodKey:Class;
+		protected var _data:*;
 		
 		/** element that should be rendered **/
-		public var element:*;
+		public function get element():* { return _element; }
+		public function set element(element:*):void { _element = element; }
+		
 		/** whether this is a dynamic or static element **/
-		public var isDynamic:Boolean;
+		public function get isDynamic():Boolean {return _isDynamic};
+		public function set isDynamic(isDynamic:Boolean):void { _isDynamic = isDynamic; }
+		
 		/** IFoamRenderers can use this key as a means to map element type to a drawing method **/
-		public var renderMethodKey:Class;
+		public function get renderMethodKey():Class { return _renderMethodKey; }
+		public function set renderMethodKey(renderMethodKey:Class):void { _renderMethodKey = renderMethodKey; }
+		
 		/** holds any datatype generic or specific to your IFoamRenderer **/
-		public var data:*;
+		public function get data():* { return _data; }
+		public function set data(data:*):void { _data = data; }
 		
 		public function Renderable( element:*, 
 									isDynamic:Boolean = true, 
 									data:* = null )
 		{
 			
-			this.element = element;
-			this.isDynamic = isDynamic;
-			if( data ) this.data = data;
-			else this.data = new Object();
-			this.renderMethodKey = getDefinitionByName( getQualifiedClassName( element ) ) as Class;
+			_element = element;
+			_isDynamic = isDynamic;
+			if( data ) _data = data;
+			else _data = new Object();
+			_renderMethodKey = getDefinitionByName( getQualifiedClassName( element ) ) as Class;
 			
 		}
 		
