@@ -31,13 +31,28 @@ THE SOFTWARE.
 package org.generalrelativity.foam.dynamics.element.body
 {
 	
-	import flash.display.Graphics;
-	import org.generalrelativity.foam.math.RotationMatrix;
-	import org.generalrelativity.foam.dynamics.enum.Simplification;
 	import org.generalrelativity.foam.dynamics.collision.enum.CollisionType;
+	import org.generalrelativity.foam.dynamics.enum.Simplification;
+	import org.generalrelativity.foam.view.IRenderable;
 	
-	public class Circle extends RigidBody
+	public class Circle extends RigidBody implements IRenderable
 	{
+		///////// IRenderable implementation
+		/** element that should be rendered **/
+		public function get element():* { return this; }
+		
+		/** whether this is a dynamic or static element **/
+		public function get isDynamic():Boolean { return mass != Simplification.INFINITE_MASS; }
+		
+		/** IFoamRenderers can use this key as a means to map element type to a drawing method **/
+		public function get renderMethodKey():Class {return Circle}
+		
+		/** holds any datatype generic or specific to your IFoamRenderer **/
+		public function get data():* { return _data; }
+		public function set data(data:*):void { _data = data; }
+		protected var _data:* = new Object();
+		////////
+		
 		
 		/** circle's radius **/
 		public var radius:Number;
