@@ -73,15 +73,15 @@ package org.generalrelativity.foam.view
 		public function addRenderable( renderable:IRenderable ) : void
 		{
 			setupRenderDataDefaults( renderable );
-			if( renderable.isDynamic ) _dynamicRenderables.push( renderable );
-			else _staticRenderables.push( renderable );
+			if( renderable.isDynamic ) { _dynamicRenderables.push( renderable ); }
+			else { _staticRenderables.push( renderable ); }
 		}
 		
 		public function removeRenderable( renderable:IRenderable ) : void
 		{
 			var array:Array;
-			if( renderable.isDynamic ) array = _dynamicRenderables;
-			else array = _staticRenderables;
+			if( renderable.isDynamic ) { array = _dynamicRenderables; }
+			else { array = _staticRenderables; }
 			var index:int = array.indexOf( renderable );
 			if( index > -1 ) array.splice( index, 1 );
 		}
