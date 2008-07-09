@@ -51,8 +51,9 @@ package org.generalrelativity.foam.dynamics.force.spring
 	import org.generalrelativity.foam.dynamics.force.SimpleForceGenerator;
 	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.util.MathUtil;
+	import org.generalrelativity.foam.view.IRenderable;
 
-	public class Spring extends SimpleForceGenerator implements IForceGenerator
+	public class Spring extends SimpleForceGenerator implements IForceGenerator, IRenderable
 	{
 		
 		/** element to generate spring force on **/
@@ -65,6 +66,14 @@ package org.generalrelativity.foam.dynamics.force.spring
 		protected var damp:Number;
 		/** the spring's happy length (where no force is generated **/
 		protected var _restLength:Number;
+		
+		// IRenderable implementation.
+		public function get element():* { return this; }
+		public function get isDynamic():Boolean { return true; }
+		public function get renderMethodKey():Class { return Spring; }
+		public function get data():* { return _data; }
+		public function set data(data:*):void { _data = data; }
+		protected var _data:Object = {};
 		
 		/**
 		 * Constructs a new Spring
@@ -86,13 +95,11 @@ package org.generalrelativity.foam.dynamics.force.spring
 			restLength = MathUtil.distance( element1.x, element2.x, element1.y, element2.y );
 		}
 		
-		public function get restLength():Number  {
-			return _restLength;
-		}
-		public function set restLength( value:Number ) : void
-		{
-			_restLength = value;
-		}
+		/**
+		 * The rest length of a spring is the length when no forces are generated.
+		 */
+		public function get restLength():Number  { return _restLength; }
+		public function set restLength( value:Number ) : void { _restLength = value; }
 		
 		override public function generate( element:ISimulatable ) : void
 		{
