@@ -9,13 +9,13 @@ package org.generalrelativity.foam.view
 	
 		/** element that should be rendered **/
 		function get element():*;
-		function set element(element:*):void;
+		//function set element(element:*):void;
 		/** whether this is a dynamic or static element **/
 		function get isDynamic():Boolean;
-		function set isDynamic(isDynamic:Boolean):void;
+		//function set isDynamic(isDynamic:Boolean):void;
 		/** IFoamRenderers can use this key as a means to map element type to a drawing method **/
 		function get renderMethodKey():Class;
-		function set renderMethodKey(renderMethodKey:Class):void;
+		//function set renderMethodKey(renderMethodKey:Class):void;
 		/** holds any datatype generic or specific to your IFoamRenderer **/
 		function get data():*;
 		function set data(data:*):void;

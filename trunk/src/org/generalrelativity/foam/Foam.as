@@ -177,8 +177,11 @@ package org.generalrelativity.foam
 					//add this to display as a child of FOAM
 					addChild( DisplayObject( _renderer ) );
 				}
-				
-				addRenderable( new Renderable( element, element.mass != Simplification.INFINITE_MASS, renderData ) );
+				if (element is IRenderable) {
+					addRenderable(IRenderable(element));
+				} else { 
+					addRenderable(new Renderable( element, element.mass != Simplification.INFINITE_MASS, renderData ) );	
+				}
 				
 			}
 			
