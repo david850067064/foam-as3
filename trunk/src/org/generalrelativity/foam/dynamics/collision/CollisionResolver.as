@@ -217,7 +217,7 @@ package org.generalrelativity.foam.dynamics.collision
 				body2.vy += dlv2.y;
 				body2.av += dav2;
 				
-				var event:CollisionEvent = new CollisionEvent(CollisionEvent.COLLISION, body1, body2);
+				var event:CollisionEvent = new CollisionEvent(CollisionEvent.COLLISION_RESOLVED, contact);
 				dispatchEvent(event);
 			}
 			
