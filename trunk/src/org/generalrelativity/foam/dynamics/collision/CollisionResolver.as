@@ -37,12 +37,21 @@ THE SOFTWARE.
 package org.generalrelativity.foam.dynamics.collision
 {
 	
-	import org.generalrelativity.foam.math.Vector;
-	import org.generalrelativity.foam.dynamics.element.IBody;
+	import flash.events.EventDispatcher;
 	
-	public class CollisionResolver
+	import org.generalrelativity.foam.dynamics.element.IBody;
+	import org.generalrelativity.foam.events.CollisionEvent;
+	import org.generalrelativity.foam.math.Vector;
+	
+	public class CollisionResolver extends EventDispatcher
 	{
 		
+		static protected var _instance:CollisionResolver;
+		static public function getInstance():CollisionResolver {
+			if (!_instance) { _instance = new CollisionResolver(new SingletonEnforcer()); }
+			return _instance;
+		} 
+		public function CollisionResolver(singletonEnforcer:SingletonEnforcer) {}
 		
 		/**
 		 * Resolves an Array of pairwise Contacts
@@ -91,7 +100,7 @@ package org.generalrelativity.foam.dynamics.collision
 		 * @see IBody.friction
 		 * @see IBody.elasticity
 		 * */
-		public static function resolve( contacts:Array ) : void
+		public function resolve( contacts:Array ) : void
 		{
 			
 			//declare properties for holding the bodies in contact
@@ -208,11 +217,11 @@ package org.generalrelativity.foam.dynamics.collision
 				body2.vy += dlv2.y;
 				body2.av += dav2;
 				
+				var event:CollisionEvent = new CollisionEvent(CollisionEvent.COLLISION, body1, body2);
+				dispatchEvent(event);
 			}
 			
 		}
-		
-	
-		
 	}
 }
+class SingletonEnforcer {}
