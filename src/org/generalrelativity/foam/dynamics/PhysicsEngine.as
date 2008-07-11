@@ -53,8 +53,6 @@ THE SOFTWARE.
 package org.generalrelativity.foam.dynamics
 {
 	
-	import flash.events.EventDispatcher;
-	
 	import org.generalrelativity.foam.dynamics.collision.CollisionResolver;
 	import org.generalrelativity.foam.dynamics.collision.ICoarseCollisionDetector;
 	import org.generalrelativity.foam.dynamics.collision.ICollisionFactory;
@@ -66,7 +64,7 @@ package org.generalrelativity.foam.dynamics
 	import org.generalrelativity.foam.dynamics.ode.IODESolver;
 	import org.generalrelativity.foam.math.Vector;
 	
-	public class PhysicsEngine extends EventDispatcher
+	public class PhysicsEngine 
 	{
 		
 		/** offers a default number of iterations per frame **/

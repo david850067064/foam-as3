@@ -36,6 +36,8 @@ package org.generalrelativity.foam
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.events.TimerEvent;
+	import flash.utils.Timer;
 	
 	import org.generalrelativity.foam.dynamics.PhysicsEngine;
 	import org.generalrelativity.foam.dynamics.collision.ICoarseCollisionDetector;
@@ -84,6 +86,7 @@ package org.generalrelativity.foam
 		/** defines the amount of time simulated each frame **/
 		private var _timestep:Number;
 		
+		private var _timer:Timer;
 		
 		private var _velocityMap:SimpleMap;
 		
@@ -285,7 +288,7 @@ package org.generalrelativity.foam
 		{
 			if( _renderMap.has( element ) )
 			{
-				_renderer.removeRenderable( Renderable( _renderMap.getValue( element ) ) );
+				_renderer.removeRenderable( IRenderable( _renderMap.getValue( element ) ) );
 				_renderMap.remove( element );
 				if( _isSimulating ) _renderer.draw();
 			}
@@ -348,6 +351,7 @@ package org.generalrelativity.foam
 			}
 			
 		}
+		
 		
 		/**
 		 * Stops the simulation

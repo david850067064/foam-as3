@@ -2,7 +2,7 @@ package org.generalrelativity.foam.events
 {
 	import flash.events.Event;
 	
-	import org.generalrelativity.foam.dynamics.element.IBody;
+	import org.generalrelativity.foam.dynamics.collision.Contact;
 
 	/**
 	 * An event that is dispatched when a collision occurs.
@@ -11,24 +11,21 @@ package org.generalrelativity.foam.events
 	 */
 	public class CollisionEvent extends Event
 	{
-		[Event(name="collision", type="org.generalrelativity.foam.events.CollisionEvent")]
-		public static const COLLISION:String = "collision";
+		[Event(name="collisionResolved", type="org.generalrelativity.foam.events.CollisionEvent")]
+		public static const COLLISION_RESOLVED:String = "collisionResolved";
 		
-		public var body1:IBody;
-		public var body2:IBody;
+		public var contact:Contact;
 		
 		/**
 		 * Constructor.
 		 * 
 		 * @param type The type of event being dispatched.
-		 * @param body1 The first of 2 bodies involved in the collision.
-		 * @param body2 The second of 2 bodies involved in the collision.
+		 * @param contact The contact object for the collision.
 		 */
-		public function CollisionEvent(type:String, body1:IBody, body2:IBody )
+		public function CollisionEvent(type:String, contact:Contact )
 		{
 			super(type, false, false);
-			this.body1 = body1;
-			this.body2 = body2;
+			this.contact = contact;
 		}
 		
 	}

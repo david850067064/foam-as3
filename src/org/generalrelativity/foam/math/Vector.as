@@ -79,6 +79,10 @@ package org.generalrelativity.foam.math
 		}
 		
 		
+		public function distanceTo(v:Vector):Number {
+			return Math.sqrt((x-v.x)*(x-v.x) + (y-v.y)+(y-v.y));
+		}
+		
 		/**
 		 * Subtracts a Vector from the instance
 		 * Note that this alters the Vector
