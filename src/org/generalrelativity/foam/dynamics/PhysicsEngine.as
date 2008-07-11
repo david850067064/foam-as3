@@ -53,18 +53,20 @@ THE SOFTWARE.
 package org.generalrelativity.foam.dynamics
 {
 	
-	import org.generalrelativity.foam.dynamics.element.ISimulatable;
-	import org.generalrelativity.foam.dynamics.ode.IODESolver;
-	import org.generalrelativity.foam.dynamics.collision.IFineCollisionDetector;
+	import flash.events.EventDispatcher;
+	
 	import org.generalrelativity.foam.dynamics.collision.CollisionResolver;
 	import org.generalrelativity.foam.dynamics.collision.ICoarseCollisionDetector;
-	import org.generalrelativity.foam.dynamics.collision.coarse.AABRDetector;
 	import org.generalrelativity.foam.dynamics.collision.ICollisionFactory;
+	import org.generalrelativity.foam.dynamics.collision.IFineCollisionDetector;
+	import org.generalrelativity.foam.dynamics.collision.coarse.AABRDetector;
 	import org.generalrelativity.foam.dynamics.collision.fine.sat.PointPolygonDetector;
-	import org.generalrelativity.foam.math.Vector;
 	import org.generalrelativity.foam.dynamics.element.IBody;
+	import org.generalrelativity.foam.dynamics.element.ISimulatable;
+	import org.generalrelativity.foam.dynamics.ode.IODESolver;
+	import org.generalrelativity.foam.math.Vector;
 	
-	public class PhysicsEngine
+	public class PhysicsEngine extends EventDispatcher
 	{
 		
 		/** offers a default number of iterations per frame **/
