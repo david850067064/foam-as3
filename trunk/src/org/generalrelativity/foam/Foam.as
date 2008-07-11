@@ -63,7 +63,7 @@ package org.generalrelativity.foam
 		
 		/** maps ISimulatables to IODESolvers for intefacing with <code>PhysicsEngine</code> **/
 		private var _solverMap:SimpleMap;
-		/** maps elements to Renderables for interfacing with IFoamRenderable **/
+		/** maps elements to Renderables for interfacing with IFoamRenderer **/
 		private var _renderMap:SimpleMap;
 		/** runs the simulation **/
 		private var _engine:PhysicsEngine;
@@ -91,9 +91,13 @@ package org.generalrelativity.foam
 		 * Creates a new FOAM interface
 		 * 
 		 * This is most likely the first step in creating a physics simulation.
+		 * 
+		 * @param renderer The renderer to use for this simulator (default is SimpleFoamRenderer)
 		 * */
-		public function Foam()
+		public function Foam(renderer:IFoamRenderer = null)
 		{
+			if (renderer == null) { renderer = new SimpleFoamRenderer(); }
+			setRenderer(renderer);
 			_solverMap = new SimpleMap();
 			_renderMap = new SimpleMap();
 			_velocityMap = new SimpleMap();
@@ -171,12 +175,12 @@ package org.generalrelativity.foam
 			if( render ) 
 			{
 				//if we haven't defined a renderer yet, create the default IFoamRenderer
-				if( !_renderer )
+				/* if( !_renderer )
 				{
 					_renderer = new SimpleFoamRenderer();
 					//add this to display as a child of FOAM
 					addChild( DisplayObject( _renderer ) );
-				}
+				} */
 				if (element is IRenderable) {
 					addRenderable(IRenderable(element));
 				} else { 
