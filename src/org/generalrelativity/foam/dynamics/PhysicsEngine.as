@@ -210,7 +210,7 @@ package org.generalrelativity.foam.dynamics
 			for each( var candidate:IFineCollisionDetector in candidates )
 			{
 				//if the candidate does in fact have a collision- resolve it
-				if( candidate.hasCollision() ) CollisionResolver.resolve( candidate.getContacts() );
+				if( candidate.hasCollision() ) CollisionResolver.getInstance().resolve( candidate.getContacts() );
 			}
 		}
 		
